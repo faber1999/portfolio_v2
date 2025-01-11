@@ -5,7 +5,7 @@ import MainLayout from './layouts/MainLayout.vue'
 import router from './router'
 
 const mode = useColorMode()
-mode.value = 'auto'
+mode.value = 'dark'
 
 router.beforeEach((to) => {
   const { title, description } = to.meta
