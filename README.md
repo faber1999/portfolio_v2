@@ -120,10 +120,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 [![Instagram](https://img.shields.io/badge/Instagram-fd0a83?logo=instagram)](https://www.instagram.com/faber.grajales/)
 [![Threads](https://img.shields.io/badge/Threads-gray?logo=threads)](https://www.threads.net/@faber.grajales)
 
-<label>
-  <img src='./public/flags/CO.png?raw=true' width='18' height='11'> 
-  +57 3146310397
-</label>
+<img src='./public/flags/CO.png?raw=true' width='18' height='11'> +57 3146310397
 
 ---
 
