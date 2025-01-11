@@ -1,39 +1,130 @@
-# vue-portfolio
+# Portfolio Website
 
-This template should help get you started developing with Vue 3 in Vite.
+This repository contains the source code for my portfolio website built with Vue.js. It is designed to showcase my projects, skills, and experience in a clean and modern interface.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Router System (VueRouter):** A structured and dynamic navigation system.
+- **Multi-Language Support (i18n):** Easily switch between multiple languages.
+- **Styling with Tailwind CSS:** Responsive and utility-first design.
+- **View Transitions:** Smooth and engaging animations between pages.
 
-## Type Support for `.vue` Imports in TS
+---
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Setup
 
-## Customize configuration
+Follow these steps to set up and run the project locally:
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Prerequisites
 
-## Project Setup
+Ensure you have the following tools installed on your system:
 
-```sh
-pnpm install
+- [Node.js](https://nodejs.org/) (version 16 or higher recommended)
+- [npm](https://www.npmjs.com/) or [pnpm](https://pnpm.io/)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+   or, if you prefer pnpm:
+
+   ```bash
+   pnpm install
+   ```
+
+### Run the Development Server
+
+Start the development server to view the project locally:
+
+```bash
+npm run dev
 ```
 
-### Compile and Hot-Reload for Development
+or with pnpm:
 
-```sh
-pnpm dev
+```bash
+pnpm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+The development server will start at `http://localhost:5173` by default. Open this URL in your browser to view the application.
 
-```sh
-pnpm build
+### Build for Production
+
+To create a production-ready build of the project:
+
+```bash
+npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+or with pnpm:
 
-```sh
-pnpm lint
+```bash
+pnpm run build
 ```
+
+The build files will be output to the `dist/` directory.
+
+### Preview Production Build
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+or with pnpm:
+
+```bash
+pnpm run preview
+```
+
+---
+
+## Project Structure
+
+- **src/router:** Contains the route definitions and VueRouter configuration.
+- **src/locales:** Houses the translation files for multi-language support.
+- **src/styles:** Includes global styles and Tailwind CSS configurations.
+- **src/views:** All the page components of the portfolio.
+
+---
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Connect with Me
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue)](https://www.linkedin.com/in/faber-grajales-hincapié-3919b6198/)
+[![Github](https://img.shields.io/badge/Github-black?logo=github)](https://github.com/faber1999)
+
+[![Instagram](https://img.shields.io/badge/Instagram-fd0a83?logo=instagram)](https://www.instagram.com/faber.grajales/)
+[![Threads](https://img.shields.io/badge/Threads-gray?logo=threads)](https://www.threads.net/@faber.grajales)
+
+<label>
+  <img src='./public/flags/CO.png?raw=true' width='18' height='11'> 
+  +57 3146310397
+</label>
+
+---
+
+#### Thank you for visiting my portfolio repository! 🚀
