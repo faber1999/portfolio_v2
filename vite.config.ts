@@ -9,6 +9,7 @@ export default defineConfig({
   plugins: [vue(), vueDevTools()],
   server: {
     open: true,
+    host: true,
   },
   resolve: {
     alias: {

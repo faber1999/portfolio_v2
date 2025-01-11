@@ -10,9 +10,6 @@ mode.value = 'auto'
 router.beforeEach((to) => {
   const { title, description } = to.meta
 
-  // const toDepth = to.path.split('/').length
-  // const fromDepth = from.path.split('/').length
-
   const defaultTitle = 'Default Title'
   const defaultDescription = 'Default Description'
 
@@ -21,18 +18,11 @@ router.beforeEach((to) => {
   const descriptionElement = document.querySelector('head meta[name="description"]')
 
   descriptionElement?.setAttribute('content', `${description}` || defaultDescription)
-
-  // to.meta.activeTransition = toDepth < fromDepth ? to.meta.outTransition : to.meta.inTransition
 })
 
 router.afterEach((to, from) => {
   const toDepth = to.path.split('/').length
   const fromDepth = from.path.split('/').length
-
-  console.log('----- after each -----')
-  console.log('to', toDepth)
-  console.log('from', fromDepth)
-  console.log('----- after each -----')
 
   to.meta.transition = toDepth < fromDepth ? to.meta.transition : to.meta.transition
 })
