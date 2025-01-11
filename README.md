@@ -121,6 +121,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 [![Threads](https://img.shields.io/badge/Threads-gray?logo=threads)](https://www.threads.net/@faber.grajales)
 
 <img src='./public/flags/CO.png?raw=true' width='18' height='11'> +57 3146310397
+📨 fabergrajales1999@gmail.com
 
 ---
 
