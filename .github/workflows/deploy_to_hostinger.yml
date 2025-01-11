@@ -1,0 +1,55 @@
+name: Deploy to FTP
+
+on:
+  push:
+    branches:
+      - main # Cambia a la rama que prefieras
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout del repositorio
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Instalar dependencias y construir el proyecto
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Ajusta a la versión de Node que uses
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build project
+        run: npm run build # Asegúrate de que este comando genere la carpeta dist
+
+      # 3. Eliminar archivos antiguos en el servidor FTP
+      - name: Delete specific files and folders over FTP
+        run: |
+          ftp -inv ${{ secrets.HOSTINGER_FTP_SERVER }} <<EOF
+          user ${{ secrets.HOSTINGER_FTP_USERNAME }} ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          mdelete assets/*
+          mdelete *.ico
+          delete index.html
+          delete .ftp-deploy-sync-state.json
+          bye
+          EOF
+
+      # 4. Verificar el contenido de la carpeta dist
+      - name: List dist directory
+        run: ls -la ./dist
+
+      # 5. Subir nuevos archivos al servidor FTP
+      - name: Upload files to FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_SERVER }}
+          username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          local-dir: ./dist/
