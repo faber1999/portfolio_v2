@@ -1,5 +1,9 @@
 {
   "title": {
-    "portfolio": "Faber's Portfolio"
+    "header": {
+      "light-mode": "Light Mode",
+      "dark-mode": "Dark Mode",
+      "portfolio": "Faber's Portfolio"
+    }
   }
 }
