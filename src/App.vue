@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import { useColorMode } from '@vueuse/core'
+import { onMounted } from 'vue'
 import { RouterView } from 'vue-router'
 import MainLayout from './layouts/MainLayout.vue'
 import router from './router'
 
 const mode = useColorMode()
-mode.value = 'dark'
+
+onMounted(() => {
+  mode.value = 'dark'
+})
 
 router.beforeEach((to) => {
   const { title, description } = to.meta

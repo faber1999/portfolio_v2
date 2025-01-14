@@ -15,7 +15,7 @@ const messages: Messages = {
 export const supportedLocales = Object.keys(messages)
 
 export default createI18n({
-  locale: 'es',
+  locale: 'en',
   fallbackLocale: 'en',
   legacy: false,
   messages: messages as I18nOptions['messages'],

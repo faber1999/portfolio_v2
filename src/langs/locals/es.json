@@ -1,9 +1,13 @@
 {
-  "title": {
-    "header": {
-      "light-mode": "Modo Claro",
-      "dark-mode": "Modo Oscuro",
-      "portfolio": "Portafolio de faber"
-    }
+  "menu": {
+    "profile": "Perfil",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "education": "Educación"
+  },
+  "header": {
+    "light-mode": "Modo Claro",
+    "dark-mode": "Modo Oscuro",
+    "portfolio": "Portafolio de faber"
   }
 }

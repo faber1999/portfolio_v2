@@ -59,6 +59,8 @@ export default {
       },
       backgroundColor: {
         primary: 'var(--primary-bg)',
+        secondary: 'var(--secondary-bg)',
+        tertiary: 'var(--tertiary-bg)',
       },
     },
   },

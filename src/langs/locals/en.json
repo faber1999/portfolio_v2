@@ -1,9 +1,14 @@
 {
-  "title": {
-    "header": {
-      "light-mode": "Light Mode",
-      "dark-mode": "Dark Mode",
-      "portfolio": "Faber's Portfolio"
-    }
+  "menu": {
+    "profile": "Profile",
+    "projects": "Projects",
+    "skills": "Skills",
+    "education": "Education"
+  },
+
+  "header": {
+    "light-mode": "Light Mode",
+    "dark-mode": "Dark Mode",
+    "portfolio": "Faber's Portfolio"
   }
 }

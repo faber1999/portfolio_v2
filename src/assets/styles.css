@@ -9,7 +9,9 @@
     --bg-gradient-start: #4d7181;
     --bg-gradient-end: #687f87;
 
-    --primary-bg: white;
+    --primary-bg: #e4e4e4;
+    --secondary-bg: rgba(255, 255, 255, 0.6);
+    --tertiary-bg: rgba(255, 255, 255, 0.5);
 
     /* Inspira ui styles */
 
@@ -47,7 +49,9 @@
     --bg-gradient-start: #1b1b1f;
     --bg-gradient-end: #2d2d30;
 
-    --primary-bg: #161618;
+    --primary-bg: black;
+    --secondary-bg: #6b728066;
+    --tertiary-bg: #6b728033;
 
     /* Inspira ui styles */
     --background: 222.2 84% 4.9%;

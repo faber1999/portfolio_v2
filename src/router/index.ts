@@ -1,4 +1,5 @@
 import AboutView from '@/views/AboutView.vue'
+import PageNotFound from '@/views/PageNotFound.vue'
 import type { Component } from 'vue'
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/ProfileView.vue'
@@ -18,7 +19,7 @@ export const routes: AppRoute[] = [
     name: 'profile',
     component: HomeView,
     meta: {
-      icon: () => import('@/components/icons/IconTooling.vue'),
+      icon: () => import('@/components/icons/IconProfile.vue'),
       title: 'Profile',
       description: 'This is my awesome profile',
       transition: 'slide-left',
@@ -26,10 +27,10 @@ export const routes: AppRoute[] = [
   },
   {
     path: '/projects',
-    name: 'Projects',
+    name: 'projects',
     component: AboutView,
     meta: {
-      icon: () => import('@/components/icons/IconCommunity.vue'),
+      icon: () => import('@/components/icons/IconProjects.vue'),
       title: 'Projects',
       description: 'This is my awesome projects',
       transition: 'slide-up',
@@ -37,10 +38,10 @@ export const routes: AppRoute[] = [
   },
   {
     path: '/skills',
-    name: 'Skills',
+    name: 'skills',
     component: AboutView,
     meta: {
-      icon: () => import('@/components/icons/IconCommunity.vue'),
+      icon: () => import('@/components/icons/IconSkills.vue'),
       title: 'Skills',
       description: 'This is my awesome skills',
       transition: 'slide-right',
@@ -48,13 +49,23 @@ export const routes: AppRoute[] = [
   },
   {
     path: '/education',
-    name: 'Education',
+    name: 'education',
     component: AboutView,
     meta: {
-      icon: () => import('@/components/icons/IconCommunity.vue'),
+      icon: () => import('@/components/icons/IconEducation.vue'),
       title: 'Education',
       description: 'This is my awesome education',
       transition: 'slide-down',
+    },
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'not-found',
+    component: PageNotFound,
+    meta: {
+      title: '404 - Page not found',
+      description: 'Page not found',
+      transition: 'slide-right',
     },
   },
 ]

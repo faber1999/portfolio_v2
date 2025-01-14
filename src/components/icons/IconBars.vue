@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="fill-back dark:fill-white h-6 w-6"
+    class="fill-black dark:fill-white size-6"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >

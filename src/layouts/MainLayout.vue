@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import ParticlesBg from '@/components/inspira-ui/ParticlesBg.vue'
 import MyAside from '@/components/MyAside.vue'
 import MyHeader from '@/components/MyHeader.vue'
-import router from '@/router'
 import { breakpointsTailwind, useBreakpoints, useColorMode } from '@vueuse/core'
 import { computed, ref, watch } from 'vue'
 
@@ -26,27 +26,33 @@ watch(breakpoints.active(), () => {
   isAsideOpen.value = breakpoints.isGreaterOrEqual('lg')
 })
 
-router.afterEach(() => {
-  isAsideOpen.value = breakpoints.isGreaterOrEqual('lg')
-})
+// router.afterEach(() => {
+//   isAsideOpen.value = breakpoints.isGreaterOrEqual('lg')
+// })
 </script>
 
 <template>
-  <div
-    class="flex flex-row flex-1 bg-gradient-to-b pb-8 pr-8"
-    :class="{
-      'from-bg-gradient-start from-0% to-bg-gradient-end to-100%': !isDark,
-      'from-bg-gradient-start from-50% to-bg-gradient-end to-100%': isDark,
-    }"
-  >
-    <MyAside :is-aside-open="isAsideOpen" />
+  <div class="relative flex flex-row flex-1 bg-primary">
+    <div class="size-full flex flex-row flex-1">
+      <div class="z-10 relative flex size-full">
+        <MyAside :is-aside-open="isAsideOpen" />
 
-    <main class="flex flex-col flex-1">
-      <MyHeader :is-aside-open="isAsideOpen" @action-clicked="toggleAsideAction" />
+        <main class="flex flex-col flex-1">
+          <MyHeader :is-aside-open="isAsideOpen" @action-clicked="toggleAsideAction" />
 
-      <div class="bg-primary rounded-3xl flex-1 p-4 shadow-lg shadow-gray-500/50">
-        <slot />
+          <div class="flex rounded-3xl flex-1 p-4 overflow-y-auto">
+            <slot />
+          </div>
+        </main>
       </div>
-    </main>
+      <ParticlesBg
+        class="absolute z-0 size-full"
+        :quantity="150"
+        :ease="100"
+        :color="isDark ? '#FFF' : '#000'"
+        :staticity="20"
+        refresh
+      />
+    </div>
   </div>
 </template>
