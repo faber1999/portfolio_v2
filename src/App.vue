@@ -8,7 +8,7 @@ import router from './router'
 const mode = useColorMode()
 
 onMounted(() => {
-  mode.value = 'dark'
+  mode.value = 'auto'
 })
 
 router.beforeEach((to) => {

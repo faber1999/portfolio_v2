@@ -19,7 +19,6 @@
       >
         Map Here
       </div>
-      <!-- <div class="bg-purple-500 w-full h-1/2 rounded-2xl"></div> -->
     </div>
   </div>
 </template>

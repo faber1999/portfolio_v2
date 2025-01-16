@@ -3,8 +3,6 @@ import { useColorMode } from '@vueuse/core'
 import { computed } from 'vue'
 
 import { useI18n } from 'vue-i18n'
-import IconBars from './icons/IconBars.vue'
-import IconClose from './icons/IconClose.vue'
 import IconEn from './icons/IconEn.vue'
 import IconEs from './icons/IconEs.vue'
 import IconMoon from './icons/IconMoon.vue'
@@ -26,16 +24,6 @@ const changeColorMode = () => {
 const changeLang = () => {
   locale.value = locale.value === 'en' ? 'es' : 'en'
 }
-
-defineProps<{
-  isAsideOpen: boolean
-}>()
-
-const emits = defineEmits<{ actionClicked: [alwaysFalse?: boolean] }>()
-
-const emitActionClicked = (alwaysFalse?: boolean) => {
-  emits('actionClicked', alwaysFalse)
-}
 </script>
 
 <template>
@@ -43,11 +31,6 @@ const emitActionClicked = (alwaysFalse?: boolean) => {
     class="lg:bg-transparent flex relative items-center flex-row h-16 p-4 justify-between dark:text-white"
   >
     <div class="flex items-center gap-2">
-      <div class="lg:hidden cursor-pointer" @click="emitActionClicked()">
-        <IconBars v-if="!isAsideOpen" />
-        <IconClose v-else />
-      </div>
-
       <HyperText
         :text="$t('header.portfolio')"
         class="my-8 md:text-3xl lg:text-4xl"
@@ -66,12 +49,6 @@ const emitActionClicked = (alwaysFalse?: boolean) => {
         <IconEs v-if="locale === 'es'" />
         <IconEn v-else />
       </div>
-
-      <!-- <div class="hover:bg-white/20 p-2 rounded-full">
-        <div class="relative w-6 h-6 flex-1 z-10 self-center">
-          <LangPicker class="text-black dark:text-white" />
-        </div>
-      </div> -->
     </div>
   </header>
 </template>
