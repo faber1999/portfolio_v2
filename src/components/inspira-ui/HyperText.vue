@@ -8,8 +8,8 @@
         v-for="(letter, i) in displayText"
         :key="i"
         v-motion
-        :class="cn(letter === ' ' ? 'w-2' : '', $props.class)"
-        class="inline-block font-cursive"
+        :class="cn(letter === ' ' ? 'w-4' : '', $props.class)"
+        class="inline-block"
         :initial="{ opacity: 0, y: -10 }"
         :enter="{ opacity: 1, y: 0 }"
         :delay="i * (duration / (text.length * 10))"

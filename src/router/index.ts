@@ -1,4 +1,5 @@
 import AboutView from '@/views/AboutView.vue'
+import EducationView from '@/views/EducationView.vue'
 import PageNotFound from '@/views/PageNotFound.vue'
 import type { Component } from 'vue'
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
@@ -22,7 +23,7 @@ export const routes: AppRoute[] = [
       icon: () => import('@/components/icons/IconProfile.vue'),
       title: 'Profile',
       description: 'This is my awesome profile',
-      transition: 'slide-left',
+      transition: 'slide-right',
     },
   },
   {
@@ -33,7 +34,7 @@ export const routes: AppRoute[] = [
       icon: () => import('@/components/icons/IconProjects.vue'),
       title: 'Projects',
       description: 'This is my awesome projects',
-      transition: 'slide-up',
+      transition: 'slide-right',
     },
   },
   {
@@ -50,12 +51,12 @@ export const routes: AppRoute[] = [
   {
     path: '/education',
     name: 'education',
-    component: AboutView,
+    component: EducationView,
     meta: {
       icon: () => import('@/components/icons/IconEducation.vue'),
       title: 'Education',
       description: 'This is my awesome education',
-      transition: 'slide-down',
+      transition: 'slide-right',
     },
   },
   {

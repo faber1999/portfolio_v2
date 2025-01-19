@@ -10,6 +10,6 @@ const iconResolver = props.icon ? defineAsyncComponent(() => props.icon!()) : nu
 
 <template>
   <div v-if="iconResolver">
-    <component :is="iconResolver" />
+    <component :is="iconResolver" :class="$props.class" />
   </div>
 </template>

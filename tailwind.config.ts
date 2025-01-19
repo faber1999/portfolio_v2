@@ -9,16 +9,6 @@ export default {
   prefix: '',
   theme: {
     extend: {
-      fontFamily: {
-        cursive: [
-          'American Typewriter',
-          'serif',
-          'Comic Sans MS',
-          'Comic Sans',
-          'Apple Chancery',
-          'cursive',
-        ],
-      },
       colors: {
         'bg-gradient-start': 'var(--bg-gradient-start)',
         'bg-gradient-end': 'var(--bg-gradient-end)',

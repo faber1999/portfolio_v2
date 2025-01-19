@@ -24,10 +24,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 221.2 83.2% 53.3%;
+    --primary: 0 100% 0%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 271.48 81.33% 55.88%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -52,6 +52,7 @@
     --primary-bg: black;
     --secondary-bg: #6b728066;
     --tertiary-bg: #6b728033;
+    --quaternary-bg: #6b7280;
 
     /* Inspira ui styles */
     --background: 222.2 84% 4.9%;
@@ -63,10 +64,10 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 217.2 91.2% 59.8%;
+    --primary: 0 100% 100%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 48 96% 53%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
@@ -82,12 +83,24 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
   }
+
+  * {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--quaternary-bg) var(--secondary-bg);
+  }
 }
 
 html {
-  font-family: Inter, sans-serif, ui-sans-serif, system-ui, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
-
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    Liberation Mono,
+    Courier New,
+    monospace;
   width: 100%;
   height: 100%;
   overflow: hidden;

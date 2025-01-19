@@ -12,26 +12,27 @@ const isDark = computed(() => colorMode.value == 'dark')
 
 <template>
   <div class="relative flex flex-row flex-1 bg-primary">
-    <div class="size-full flex flex-row flex-1">
-      <div class="z-10 relative flex flex-col-reverse size-full lg:flex-row">
+    <div class="size-full flex flex-row">
+      <main class="z-10 relative max-h-full flex flex-col-reverse size-full md:flex-row">
         <MyAside />
 
-        <main class="flex flex-col flex-1">
+        <div class="flex flex-col flex-grow max-h-full overflow-y-auto">
           <MyHeader />
 
-          <div class="flex rounded-3xl flex-1 p-4">
+          <div class="flex rounded-3xl flex-1 p-4 overflow-y-auto">
             <slot />
           </div>
-        </main>
-      </div>
-      <ParticlesBg
-        class="absolute z-0 size-full"
-        :quantity="150"
-        :ease="100"
-        :color="isDark ? '#FFF' : '#000'"
-        :staticity="20"
-        refresh
-      />
+        </div>
+      </main>
     </div>
+
+    <ParticlesBg
+      class="absolute z-0 size-full"
+      :quantity="150"
+      :ease="100"
+      :color="isDark ? '#FFF' : '#000'"
+      :staticity="20"
+      refresh
+    />
   </div>
 </template>
