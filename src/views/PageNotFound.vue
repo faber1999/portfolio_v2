@@ -9,10 +9,16 @@ import IconPageNotFound from '@/components/icons/IconPageNotFound.vue'
 
       <div class="flex flex-col items-center gap-4">
         <h1 class="text-4xl font-bold text-black dark:text-white">404</h1>
-        <p class="text-xl text-black dark:text-white">Houston, we have a problem.</p>
+        <p class="text-xl text-black dark:text-white">
+          {{ $t('404.title') }}
+        </p>
 
-        <p class="text-gray-500 dark:text-gray-400 text-center">We couldn’t find that page.</p>
-        <router-link to="/" class="text-primary">Go to profile</router-link>
+        <p class="text-gray-500 dark:text-gray-400 text-center">
+          {{ $t('404.sub-title') }}
+        </p>
+        <router-link to="/" class="text-primary">
+          {{ $t('404.back-profile') }}
+        </router-link>
       </div>
     </div>
   </div>

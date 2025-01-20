@@ -9,5 +9,39 @@
     "light-mode": "Modo Claro",
     "dark-mode": "Modo Oscuro",
     "portfolio": "Portafolio de faber"
+  },
+  "education": {
+    "higher-education": "Educación Superior",
+    "systems-engineer": "Ingeniería de Sistemas",
+    "systems-engineer-description": "Tras obtener mi primer empleo con los conocimientos que adquirí en el SENA me pagué la universidad, trabajaba en el día y estudiaba en la noche, con mucho esfuerzo y sacrificio pude culminar mis estudios y graduarme como Ingeniero de Sistemas.",
+    "adsi": "Tecnólogo en Análisis y Desarrollo de Sistemas de Información",
+    "adsi-description": "Sin tener muchos recursos y con una computadora que sobrevivía a duras penas, comencé a estudiar en el SENA, desempeñándome con un gran rendimiento académico.",
+    "adsi-description-2": "Junto a otros dos compañeros representamos la regional del Quindío en las competencias nacionales SenaSoft (2017) en la competencia de Desarrollo web.",
+    "technical-bachelor": "Bachiller Técnico en Sistemas",
+    "technical-bachelor-description": "En el colegio me inscribí en la modalidad en Sistemas ya que siempre me atrajo la tecnología, es aquí donde me apasioné por el desarrollo, disfrutaba ver cada semana las clases de software con Scratch y diagramas de flujo, suplicando por empezar a programar, pero hoy por hoy doy gracias a los buenos docentes que tuve y las buenas bases que sembraron en mi, ayudándome a desarrollar el razonamiento crítico y resolución de problemas.",
+    "courses-certifications": "Cursos y Certificaciones"
+  },
+  "months": {
+    "january": "Enero",
+    "february": "Febrero",
+    "march": "Marzo",
+    "april": "Abril",
+    "may": "Mayo",
+    "june": "Junio",
+    "july": "Julio",
+    "august": "Agosto",
+    "september": "Septiembre",
+    "october": "Octubre",
+    "november": "Noviembre",
+    "december": "Diciembre"
+  },
+  "under-construction": {
+    "title": "En Construcción",
+    "description": "Próximamente..."
+  },
+  "404": {
+    "title": "Houston, tenemos un problema.",
+    "sub-title": "No pudimos encontrar esa página.",
+    "back-profile": "Volver al perfil"
   }
 }

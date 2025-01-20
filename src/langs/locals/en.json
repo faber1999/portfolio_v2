@@ -5,10 +5,43 @@
     "skills": "Skills",
     "education": "Education"
   },
-
   "header": {
     "light-mode": "Light Mode",
     "dark-mode": "Dark Mode",
     "portfolio": "Faber's Portfolio"
+  },
+  "education": {
+    "higher-education": "Higher Education",
+    "systems-engineer": "Systems Engineering",
+    "systems-engineer-description": "After obtaining my first job with the knowledge I acquired at SENA, I paid for my university, I worked during the day and studied at night, with a lot of effort and sacrifice I was able to finish my studies and graduate as a Systems Engineer.",
+    "adsi": "Technologist in Analysis and Development of Information Systems",
+    "adsi-description": "Without having many resources and with a computer that barely survived, I started studying at SENA, performing with great academic performance.",
+    "adsi-description-2": "Together with two other colleagues, we represented the Quindío region in the national SenaSoft competitions (2017) in the web development competition.",
+    "technical-bachelor": "Technical Bachelor in Systems",
+    "technical-bachelor-description": "In high school, I enrolled in the Systems modality since I was always attracted to technology, it is here where I became passionate about development, I enjoyed seeing the software classes with Scratch and flowcharts every week, begging to start programming, but today I am grateful for the good teachers I had and the good foundations they planted in me, helping me develop critical reasoning and problem-solving.",
+    "courses-certifications": "Courses and Certifications"
+  },
+  "months": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December"
+  },
+  "under-construction": {
+    "title": "Under Construction",
+    "description": "Coming soon..."
+  },
+  "404": {
+    "title": "Houston, we have a problem.",
+    "sub-title": "We couldn't find that page.",
+    "back-profile": "Back to profile"
   }
 }
