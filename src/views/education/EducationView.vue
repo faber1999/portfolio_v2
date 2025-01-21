@@ -73,34 +73,34 @@ const coursesCertifications = [
 </script>
 
 <template>
-  <div class="flex flex-col flex-1 h-fit min-h-full gap-4 xl:flex-row">
+  <div class="flex flex-col flex-1 h-fit min-h-full gap-4 xl:flex-row max-h-full">
     <div class="flex flex-col gap-6 bg-tertiary p-4 rounded-lg w-full xl:w-1/2">
       <div
-        class="flex flex-col items-center gap-2 text-secondary self-center text-xl md:flex-row md:text-2xl lg:text-3xl"
+        class="flex flex-col items-center gap-2 text-primary self-center text-xl md:flex-row md:text-2xl lg:text-3xl"
       >
-        <IconBachelorCap class="w-10 h-10" />
+        <IconBachelorCap class="size-10" />
 
         {{ $t('education.higher-education') }}
       </div>
 
-      <hr class="border-black/20 w-11/12 self-center dark:border-white/15" />
+      <hr class="border-black/20 w-10/12 self-center dark:border-white/15" />
 
-      <ol class="relative">
+      <ol class="relative overflow-y-auto">
         <HigherEducation v-for="item in higherEducation" :key="item.title" v-bind="item" />
       </ol>
     </div>
 
     <div class="flex flex-col gap-6 bg-tertiary p-4 rounded-lg w-full xl:w-1/2">
       <div
-        class="flex flex-col items-center gap-2 text-secondary self-center text-xl md:flex-row md:text-2xl lg:text-3xl"
+        class="flex flex-col items-center gap-2 text-primary self-center text-xl md:flex-row md:text-2xl lg:text-3xl"
       >
-        <IconDiploma class="w-10 h-10" />
+        <IconDiploma class="size-10" />
         {{ $t('education.courses-certifications') }}
       </div>
 
-      <hr class="border-black/20 w-11/12 self-center dark:border-white/15" />
+      <hr class="border-black/20 w-10/12 self-center dark:border-white/15" />
 
-      <ol class="relative">
+      <ol class="relative overflow-y-active">
         <CourseOrCertificate
           v-for="item in coursesCertifications"
           :key="item.title"

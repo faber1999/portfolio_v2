@@ -1,5 +1,5 @@
 <template>
-  <svg class="size-6" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <svg :class="$props.class" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <title>profile_round [#1342]</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>

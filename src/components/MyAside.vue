@@ -20,17 +20,18 @@ import DynamicIcon from './DynamicIcon.vue'
         :title="$t(`menu.${route.name?.toString()}`)"
         class="flex flex-col justify-center align-middle items-center gap-1 text-primary"
         :class="{
-          'text-secondary font-bold': isActive,
+          'text-secondary font-semibold': isActive,
         }"
       >
         <div
           class="flex justify-center w-14 lg:w-full items-center aspect-square rounded-full transition-all duration-500"
           :class="{
-            'hover:bg-black/20': !isActive,
-            'bg-gray-500/30 dark:bg-black/35 shadow-black/45 shadow-md': isActive,
+            'hover:bg-gray-300/40 dark:hover:bg-black/20': !isActive,
+            'bg-gray-500/10 dark:bg-black/35 shadow-black/20 dark:shadow-black/45 shadow-md':
+              isActive,
           }"
         >
-          <DynamicIcon :icon="route.meta?.icon" />
+          <DynamicIcon class="size-6" :icon="route.meta?.icon" />
         </div>
 
         <div class="text-sm max-w-20 truncate">

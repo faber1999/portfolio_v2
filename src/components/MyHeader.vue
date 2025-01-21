@@ -31,7 +31,7 @@ const changeLang = () => {
     <div class="flex items-center gap-2">
       <HyperText
         :text="$t('header.portfolio')"
-        class="my-8 text-2xl md:text-3xl lg:text-4xl"
+        class="my-8 text-2xl md:text-3xl lg:text-4xl title font-medium"
         :duration="800"
         :animate-on-hover="true"
       />
@@ -39,13 +39,13 @@ const changeLang = () => {
 
     <div class="flex gap-0 lg:gap-2">
       <div class="block cursor-pointer hover:bg-white/20 p-2 rounded-full" @click="changeColorMode">
-        <IconSun v-if="isDark" />
-        <IconMoon v-else />
+        <IconSun class="size-6" v-if="isDark" />
+        <IconMoon class="size-6 text-blue-800" v-else />
       </div>
 
       <div class="block cursor-pointer hover:bg-white/20 p-2 rounded-full" @click="changeLang">
-        <IconEs v-if="locale === 'es'" />
-        <IconEn v-else />
+        <IconEs class="size-6" v-if="locale === 'es'" />
+        <IconEn class="size-6" v-else />
       </div>
     </div>
   </header>

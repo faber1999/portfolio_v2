@@ -25,30 +25,28 @@ const { isMobile } = useDeviceType()
     >
       <div class="relative pb-8">
         <div>
-          <span class="text-secondary -left-[42px] absolute rounded-full text-[2rem] leading-none"
-            >•</span
-          >
+          <span class="text-secondary -left-[42px] -top-[10px] absolute rounded-full text-5xl">
+            •
+          </span>
 
           <div class="flex flex-col gap-3">
             <h3 class="text-lg font-bold text-secondary">
-              {{ $t(title) }}
+              {{ title }}
             </h3>
 
-            <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"
+            <time class="p-0 m-0 text-sm text-gray-800 dark:text-white/80"
               >{{ `${platformName} (${$t(month)} - ${year})` }}
             </time>
 
-            <span class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">
+            <span class="p-0 m-0 text-sm text-gray-800 dark:text-white/80">
               {{ `${$t('education.credential-id')}: ${credentialId}` }}
             </span>
 
             <LinkPreview :url="certificationUrl" :width="280" :height="200" v-if="!isMobile">
-              <span
-                class="bg-gradient-to-br from-secondary to-orange-500 bg-clip-text font-bold text-transparent"
-              >
+              <span class="title font-bold">
                 {{ $t('education.view-credential') }}
                 <span
-                  class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-br from-secondary to-orange-500"
+                  class="absolute bottom-0 left-0 w-full h-[2px] title-decorator"
                   aria-hidden="true"
                 ></span>
               </span>
@@ -58,11 +56,11 @@ const { isMobile } = useDeviceType()
               v-else
               :href="certificationUrl"
               target="_blank"
-              class="relative font-bold text-transparent bg-gradient-to-br from-secondary to-orange-500 bg-clip-text w-fit"
+              class="relative font-bold title w-fit"
             >
               {{ $t('education.view-credential') }}
               <span
-                class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-br from-secondary to-orange-500"
+                class="absolute bottom-0 left-0 w-full h-[2px] title-decorator"
                 aria-hidden="true"
               ></span>
             </a>

@@ -1,5 +1,12 @@
 @import './view-transitions.css';
 
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../assets/fonts/Quicksand-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 300 700;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -27,8 +34,11 @@
     --primary: 0 100% 0%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 271.48 81.33% 55.88%;
+    --secondary: 221.97 81.33% 55.88%;
     --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --tertiary: 270.74 91.01% 65.1%;
+    --tertiary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -43,6 +53,18 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
+  }
+
+  .overflow-y-active {
+    @apply overflow-y-hidden hover:overflow-y-auto active:overflow-y-auto focus:overflow-y-auto;
+  }
+
+  .title {
+    @apply text-transparent bg-gradient-to-br from-secondary to-tertiary bg-clip-text;
+  }
+
+  .title-decorator {
+    @apply bg-gradient-to-br from-secondary to-tertiary;
   }
 
   .dark {
@@ -70,6 +92,9 @@
     --secondary: 48 96% 53%;
     --secondary-foreground: 210 40% 98%;
 
+    --tertiary: 24.58 94.98% 53.14%;
+    --tertiary-foreground: 210 40% 98%;
+
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
@@ -93,6 +118,7 @@
 
 html {
   font-family:
+    'Quicksand',
     ui-monospace,
     SFMono-Regular,
     Menlo,

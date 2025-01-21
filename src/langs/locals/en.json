@@ -10,6 +10,13 @@
     "dark-mode": "Dark Mode",
     "portfolio": "Faber's Portfolio"
   },
+  "profile": {
+    "title": "Hey, I'm Faber Grajales",
+    "status": "Status: Available to work",
+    "description-1": "I am a Systems Engineer with +6 years of experience in software development, specialized in web application development.",
+    "description-2": "Passionate about frontend technologies like React and Vue, I constantly seek to optimize the user experience and deliver scalable solutions. My goal is to lead innovative projects that positively impact people's lives.",
+    "main-skills": "Main skills"
+  },
   "education": {
     "higher-education": "Higher Education",
     "systems-engineer": "Systems Engineering",
@@ -45,5 +52,16 @@
     "title": "Houston, we have a problem.",
     "sub-title": "We couldn't find that page.",
     "back-profile": "Back to profile"
+  },
+  "skills": {
+    "leadership": "Leadership",
+    "communication": "Communication",
+    "decision-making": "Decision Making",
+    "management": "Management",
+    "planning": "Planning",
+    "adaptability": "Adaptability",
+    "teamwork": "Teamwork",
+    "innovation": "Innovation",
+    "optimization": "Optimization"
   }
 }

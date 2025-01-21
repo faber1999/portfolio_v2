@@ -1,5 +1,5 @@
 <template>
-  <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <svg :class="$props.class" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
     <mask id="IconifyId1904fde5f4143b688">
       <circle cx="256" cy="256" r="256" fill="#fff"></circle>
     </mask>

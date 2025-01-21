@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="size-6"
+    :class="$props.class"
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 472 472"

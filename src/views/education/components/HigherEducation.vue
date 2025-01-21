@@ -16,20 +16,20 @@ defineProps<Props>()
     >
       <div class="relative pb-8 md:col-span-2">
         <div>
-          <span class="text-secondary -left-[42px] absolute rounded-full text-[2rem] leading-none"
-            >•</span
-          >
+          <span class="text-secondary -left-[42px] -top-[10px] absolute rounded-full text-5xl">
+            •
+          </span>
 
           <h3 class="text-lg font-bold text-secondary">
             {{ $t(title) }}
           </h3>
 
-          <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"
+          <time class="p-0 m-0 text-sm text-gray-800 dark:text-white/80"
             >{{ `${$t(month)} - ${year}` }}
           </time>
         </div>
       </div>
-      <div class="relative flex flex-col gap-6 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
+      <div class="relative flex flex-col gap-6 pb-4 text-gray-800 dark:text-white/80 md:col-span-3">
         <span v-for="description in descriptions" :key="description">
           {{ $t(description) }}
         </span>

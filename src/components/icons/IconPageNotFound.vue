@@ -1,5 +1,10 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="38.15 62.11 73.28 86.01">
+  <svg
+    :class="$props.class"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="38.15 62.11 73.28 86.01"
+  >
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"
