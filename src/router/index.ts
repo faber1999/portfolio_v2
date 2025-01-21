@@ -1,5 +1,5 @@
 import AboutView from '@/views/AboutView.vue'
-import EducationView from '@/views/EducationView.vue'
+import EducationView from '@/views/education/EducationView.vue'
 import PageNotFound from '@/views/PageNotFound.vue'
 import type { Component } from 'vue'
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
