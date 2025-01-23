@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+
 # Disallowed Sub-Directories
 Disallow: /flags
+
+# Optionally point to your sitemap
+Sitemap: https://fabergrajales.dev/sitemap.xml
