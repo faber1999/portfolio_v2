@@ -85,7 +85,7 @@ const coursesCertifications = [
 
       <hr class="border-black/20 w-10/12 self-center dark:border-white/15" />
 
-      <ol class="relative overflow-y-auto">
+      <ol class="relative overflow-y-active">
         <HigherEducation v-for="item in higherEducation" :key="item.title" v-bind="item" />
       </ol>
     </div>
