@@ -12,7 +12,8 @@
   },
   "profile": {
     "title": "Hola, soy Faber Grajales",
-    "status": "Estado: Disponible para trabajar",
+    "status": "Estado",
+    "status-value": "Disponible para trabajar",
     "description-1": "Soy Ingeniero de Sistemas con +6 años de experiencia en desarrollo de software, especializado en desarrollo de aplicaciones web.",
     "description-2": "Apasionado por las tecnologías frontend como React y Vue, busco constantemente optimizar la experiencia del usuario y entregar soluciones escalables. Mi objetivo es liderar proyectos innovadores que impacten positivamente la vida de las personas.",
     "main-skills": "Habilidades principales"

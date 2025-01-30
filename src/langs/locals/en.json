@@ -12,7 +12,8 @@
   },
   "profile": {
     "title": "Hey, I'm Faber Grajales",
-    "status": "Status: Available to work",
+    "status": "Status",
+    "status-value": "Available to work",
     "description-1": "I am a Systems Engineer with +6 years of experience in software development, specialized in web application development.",
     "description-2": "Passionate about frontend technologies like React and Vue, I constantly seek to optimize the user experience and deliver scalable solutions. My goal is to lead innovative projects that positively impact people's lives.",
     "main-skills": "Main skills"

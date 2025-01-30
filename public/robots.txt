@@ -3,6 +3,7 @@ Allow: /
 
 # Disallowed Sub-Directories
 Disallow: /flags
+Disallow: /images
 
 # Optionally point to your sitemap
 Sitemap: https://fabergrajales.dev/sitemap.xml

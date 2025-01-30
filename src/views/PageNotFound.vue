@@ -23,7 +23,7 @@ import IconPageNotFound from '@/components/icons/IconPageNotFound.vue'
             <span
               class="absolute -bottom-1 left-0 w-full h-[1px] title-decorator"
               aria-hidden="true"
-            ></span>
+            />
           </span>
         </router-link>
       </div>

@@ -19,7 +19,7 @@
             <span
               v-for="(letter, letterIndex) in wordObj.letters"
               :key="wordObj.word + letterIndex"
-              class="inline-block opacity-0"
+              class="inline-block opacity-0 title"
               :style="{
                 animation: `fadeInLetter 0.2s ease forwards`,
                 animationDelay: `${wordIndex * 0.3 + letterIndex * 0.05}s`,

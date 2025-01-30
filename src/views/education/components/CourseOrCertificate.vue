@@ -48,7 +48,7 @@ const { isMobile } = useDeviceType()
                 <span
                   class="absolute bottom-0 left-0 w-full h-[2px] title-decorator"
                   aria-hidden="true"
-                ></span>
+                />
               </span>
             </LinkPreview>
 
@@ -62,7 +62,7 @@ const { isMobile } = useDeviceType()
               <span
                 class="absolute bottom-0 left-0 w-full h-[2px] title-decorator"
                 aria-hidden="true"
-              ></span>
+              />
             </a>
           </div>
         </div>

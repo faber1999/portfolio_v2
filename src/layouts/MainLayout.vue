@@ -19,7 +19,7 @@ const isDark = computed(() => colorMode.value == 'dark')
         <div class="flex flex-col flex-grow max-h-full overflow-x-hidden overflow-y-auto">
           <MyHeader />
 
-          <div class="flex rounded-3xl flex-1 p-4 overflow-x-hidden overflow-y-auto">
+          <div class="flex rounded-3xl flex-1 px-4 overflow-x-hidden overflow-y-auto mb-4">
             <slot />
           </div>
         </div>
