@@ -25,8 +25,8 @@ import FlipWords from '@/components/inspira-ui/FlipWords.vue'
               </span>
 
               <span>
-                And I'm from
-                <img class="inline-block" src="/flags/CO.png" alt="" srcset="" />
+                {{ $t('profile.im-from') }}
+                <img class="inline-block align-baseline" src="/flags/CO.png" title="Colombia" />
               </span>
 
               <span>
