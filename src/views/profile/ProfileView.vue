@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import ContentUnderConstruction from '@/components/ContentUnderConstruction.vue'
 import FlipWords from '@/components/inspira-ui/FlipWords.vue'
+import DottedMap from './components/DottedMap.vue'
 </script>
 
 <template>
   <div class="flex flex-col flex-1 h-full min-h-full gap-4 xl:flex-row">
-    <div class="relative bg-tertiary rounded-lg w-full xl:w-3/5 xl:h-auto xl:overflow-hidden">
+    <div class="relative bg-tertiary rounded-lg w-full xl:w-1/2 xl:h-auto xl:overflow-hidden">
       <!-- <BorderBeam :size="250" :duration="12" :delay="9" :border-width="2" /> -->
 
       <div class="flex size-full justify-center dark:text-white p-4 md:p-12 xl:overflow-y-active">
@@ -25,8 +26,9 @@ import FlipWords from '@/components/inspira-ui/FlipWords.vue'
               </span>
 
               <span>
-                {{ $t('profile.im-from') }}
-                <img class="inline-block align-baseline" src="/flags/CO.png" title="Colombia" />
+                Full Stack Developer
+                <!-- {{ $t('profile.im-from') }} -->
+                <!-- <img class="inline-block align-baseline" src="/flags/CO.png" title="Colombia" /> -->
               </span>
 
               <span>
@@ -64,17 +66,54 @@ import FlipWords from '@/components/inspira-ui/FlipWords.vue'
       </div>
     </div>
 
-    <div class="flex w-full flex-col gap-4 xl:w-2/5 xl:h-auto">
+    <div class="flex w-full flex-col gap-4 xl:w-1/2 xl:h-auto">
       <div
         class="relative overflow-hidden flex size-full rounded-lg justify-center items-center dark:text-white"
       >
         <ContentUnderConstruction />
       </div>
       <div
-        class="relative overflow-hidden flex size-full rounded-lg justify-center items-center dark:text-white"
+        class="flex flex-col gap-4 bg-tertiary min-h-96 relative overflow-hidden size-full rounded-lg justify-evenly items-center dark:text-white p-4 md:min-h-60"
       >
-        <ContentUnderConstruction />
+        <div class="flex flex-col w-full items-center gap-4 text-lg md:text-xl 2xl:text-2xl">
+          <span class="title font-semibold">Availability...</span>
+
+          <ul class="grid w-full text-sm md:text-base 2xl:text-lg gap-2 grid-cols-2 font-medium">
+            <li class="text-nowrap overflow-x-hidden truncate">
+              Work Type: <span class="title font-semibold">Full-time</span>
+            </li>
+            <li class="text-nowrap overflow-x-hidden truncate">
+              Remote Work: <span class="title font-semibold truncate">Absolutely!</span>
+            </li>
+            <li class="text-nowrap overflow-x-hidden truncate">
+              Relocation: <span class="title font-semibold truncate">Yes</span>
+            </li>
+            <li class="text-nowrap overflow-x-hidden truncate">
+              Status: <span class="title font-semibold truncate">Actively Looking</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="h-full aspect-square">
+          <DottedMap />
+        </div>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.location-card h2 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.location-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.location-card li {
+  margin: 0.25rem 0;
+}
+</style>

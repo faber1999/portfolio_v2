@@ -13,13 +13,18 @@ const isDark = computed(() => colorMode.value == 'dark')
 <template>
   <div class="relative flex flex-row flex-1 bg-primary">
     <div class="size-full flex flex-row">
-      <main class="z-10 relative max-h-full flex flex-col-reverse size-full md:flex-row">
+      <main class="flex flex-col-reverse z-10 relative max-h-full size-full md:flex-row">
         <MyAside />
 
-        <div class="flex flex-col flex-grow max-h-full overflow-x-hidden overflow-y-auto">
+        <div
+          class="container mx-auto flex flex-col flex-grow max-h-full overflow-x-hidden overflow-y-auto"
+        >
           <MyHeader />
 
-          <div class="flex rounded-3xl flex-1 px-4 overflow-x-hidden overflow-y-auto mb-4">
+          <div
+            class="flex rounded-3xl flex-1 px-4 overflow-x-hidden overflow-y-auto mb-4"
+            id="content"
+          >
             <slot />
           </div>
         </div>

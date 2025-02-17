@@ -11,17 +11,21 @@ onMounted(() => {
   mode.value = 'auto'
 })
 
-router.beforeEach((to) => {
-  const { title, description } = to.meta
+router.beforeEach(() => {
+  // const { title, description } = to.meta
 
-  const defaultTitle = 'Default Title'
-  const defaultDescription = 'Default Description'
+  // const defaultTitle = 'Default Title'
+  // const defaultDescription = 'Default Description'
 
-  document.title = `${title}` || defaultTitle
+  // document.title = `${title}` || defaultTitle
 
-  const descriptionElement = document.querySelector('head meta[name="description"]')
+  // const descriptionElement = document.querySelector('head meta[name="description"]')
 
-  descriptionElement?.setAttribute('content', `${description}` || defaultDescription)
+  // descriptionElement?.setAttribute('content', `${description}` || defaultDescription)
+
+  setTimeout(() => {
+    document.querySelector('#content')?.scrollTo({ top: 0, behavior: 'instant' })
+  }, 500)
 })
 
 router.afterEach((to, from) => {

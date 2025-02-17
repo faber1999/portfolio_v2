@@ -5,7 +5,7 @@ import IconProjects from './icons/IconBuilding.vue'
 <template>
   <div class="flex size-full justify-center items-center rounded-xl bg-tertiary p-4">
     <div class="flex flex-col justify-around items-center gap-6 w-4/5 lg:w-2/4 text-center">
-      <h1 class="text-xl lg:text-2xl font-bold text-secondary title">
+      <h1 class="text-xl lg:text-2xl font-bold text-secondary">
         {{ $t('under-construction.title') }}
       </h1>
 

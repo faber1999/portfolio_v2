@@ -98,7 +98,6 @@ onBeforeUnmount(() => {
 })
 
 watch(isVisible, (newValue) => {
-  console.log('newValue', newValue)
   if (newValue) {
     startTimeout()
   }

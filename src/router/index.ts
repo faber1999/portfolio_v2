@@ -3,7 +3,7 @@ import EducationView from '@/views/education/EducationView.vue'
 import PageNotFound from '@/views/PageNotFound.vue'
 import type { Component } from 'vue'
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/ProfileView.vue'
+import ProfileView from '../views/profile/ProfileView.vue'
 
 interface AppRoute extends Omit<RouteRecordRaw, 'meta'> {
   meta?: {
@@ -18,7 +18,7 @@ export const routes: AppRoute[] = [
   {
     path: '/',
     name: 'profile',
-    component: HomeView,
+    component: ProfileView,
     meta: {
       icon: () => import('@/components/icons/IconProfile.vue'),
       title: 'Profile',
