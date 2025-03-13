@@ -11,11 +11,54 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Scroll bar stylings */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--lightestgrey);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #bbbbbb;
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #adadad;
+  }
+
+  /* Scroll bar stylings */
+  .dark ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  /* Track */
+  .dark ::-webkit-scrollbar-track {
+    background: var(--lightestgrey);
+  }
+
+  /* Handle */
+  .dark ::-webkit-scrollbar-thumb {
+    background: #979797;
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: #c5c5c5;
+  }
+}
+
 @layer base {
   :root {
-    --bg-gradient-start: #4d7181;
-    --bg-gradient-end: #687f87;
-
     --primary-bg: #e4e4e4;
     --secondary-bg: rgba(255, 255, 255, 0.6);
     --tertiary-bg: rgba(255, 255, 255, 0.5);
@@ -68,9 +111,6 @@
   }
 
   .dark {
-    --bg-gradient-start: #1b1b1f;
-    --bg-gradient-end: #2d2d30;
-
     --primary-bg: black;
     --secondary-bg: #6b728066;
     --tertiary-bg: #6b728033;
@@ -107,12 +147,6 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
-  }
-
-  * {
-    scroll-behavior: smooth;
-    scrollbar-width: thin;
-    scrollbar-color: var(--quaternary-bg) var(--secondary-bg);
   }
 }
 

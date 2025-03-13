@@ -22,7 +22,6 @@ export const routes: AppRoute[] = [
     meta: {
       icon: () => import('@/components/icons/IconProfile.vue'),
       title: 'Profile',
-      description: 'This is my awesome profile',
       transition: 'slide-right',
     },
   },
@@ -33,18 +32,15 @@ export const routes: AppRoute[] = [
     meta: {
       icon: () => import('@/components/icons/IconProjects.vue'),
       title: 'Projects',
-      description: 'This is my awesome projects',
       transition: 'slide-right',
     },
   },
   {
-    path: '/skills',
-    name: 'skills',
+    path: '/experience',
+    name: 'experience',
     component: AboutView,
     meta: {
-      icon: () => import('@/components/icons/IconSkills.vue'),
-      title: 'Skills',
-      description: 'This is my awesome skills',
+      icon: () => import('@/components/icons/IconWorkBag.vue'),
       transition: 'slide-right',
     },
   },
@@ -54,8 +50,6 @@ export const routes: AppRoute[] = [
     component: EducationView,
     meta: {
       icon: () => import('@/components/icons/IconEducation.vue'),
-      title: 'Education',
-      description: 'This is my awesome education',
       transition: 'slide-right',
     },
   },
@@ -65,7 +59,6 @@ export const routes: AppRoute[] = [
     component: PageNotFound,
     meta: {
       title: '404 - Page not found',
-      description: 'Page not found',
       transition: 'slide-right',
     },
   },

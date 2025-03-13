@@ -2,7 +2,7 @@
   "menu": {
     "profile": "Perfil",
     "projects": "Proyectos",
-    "skills": "Habilidades",
+    "experience": "Experiencia",
     "education": "Educación"
   },
   "header": {
@@ -11,13 +11,22 @@
     "portfolio": "Portafolio de faber"
   },
   "profile": {
-    "title": "Hola, soy Faber Grajales",
-    "im-from": "Y soy de",
-    "status": "Estado",
-    "status-value": "Disponible para trabajar",
+    "availability": "Disponibilidad",
+    "available": "Disponible",
+    "current-location": "Ubicado en: Armenia, Quindío, Colombia",
     "description-1": "Soy Ingeniero de Sistemas con +6 años de experiencia en desarrollo de software, especializado en desarrollo de aplicaciones web.",
     "description-2": "Apasionado por las tecnologías frontend como React y Vue, busco constantemente optimizar la experiencia del usuario y entregar soluciones escalables. Mi objetivo es liderar proyectos innovadores que impacten positivamente la vida de las personas.",
-    "main-skills": "Habilidades principales"
+    "main-skills": "Habilidades principales",
+    "relocation-value": "Sí",
+    "relocation": "Reubicación",
+    "remote-work-value": "¡Por supuesto!",
+    "remote-work": "Trabajo remoto",
+    "status-value": "Disponible para trabajar",
+    "status": "Estado",
+    "technical-skills": "Habilidades técnicas",
+    "title": "Hola, soy Faber Grajales",
+    "work-type-value": "Tiempo completo",
+    "work-type": "Tipo de trabajo"
   },
   "education": {
     "higher-education": "Educación Superior",

@@ -2,12 +2,6 @@
 import ParticlesBg from '@/components/inspira-ui/ParticlesBg.vue'
 import MyAside from '@/components/MyAside.vue'
 import MyHeader from '@/components/MyHeader.vue'
-import { useColorMode } from '@vueuse/core'
-import { computed } from 'vue'
-
-const colorMode = useColorMode()
-
-const isDark = computed(() => colorMode.value == 'dark')
 </script>
 
 <template>
@@ -35,7 +29,7 @@ const isDark = computed(() => colorMode.value == 'dark')
       class="absolute z-0 size-full"
       :quantity="150"
       :ease="100"
-      :color="isDark ? '#FFF' : '#000'"
+      color="#8b8b8b"
       :staticity="20"
       refresh
     />
