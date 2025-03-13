@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { watch, nextTick, shallowRef } from 'vue'
+import { shallowRef, onMounted } from 'vue'
 import { useTransition } from '@vueuse/core'
 
 const props = defineProps({
@@ -18,15 +18,9 @@ const progress = shallowRef(0)
 const animatedProgress = useTransition(progress, { duration: 1250 })
 
 // Cuando cambia la prop value se reinicia la animación
-watch(
-  () => props.value,
-  async () => {
-    progress.value = 0
-    await nextTick()
-    progress.value = props.value
-  },
-  { immediate: true },
-)
+onMounted(() => {
+  progress.value = props.value
+})
 </script>
 
 <template>
