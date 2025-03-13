@@ -26,11 +26,7 @@ import SkillsResume from './components/SkillsResume.vue'
                 {{ $t('profile.title') }}
               </span>
 
-              <span>
-                Full Stack Developer
-                <!-- {{ $t('profile.im-from') }} -->
-                <!-- <img class="inline-block align-baseline" src="/flags/CO.png" title="Colombia" /> -->
-              </span>
+              <span> Full Stack Developer </span>
 
               <span>
                 {{ $t('profile.status') }}:
@@ -77,21 +73,27 @@ import SkillsResume from './components/SkillsResume.vue'
       <div
         class="flex xl:flex-1 flex-col gap-4 bg-tertiary min-h-96 relative overflow-hidden rounded-lg justify-evenly items-center dark:text-white p-4 md:min-h-60"
       >
-        <div class="flex flex-col w-full items-center gap-4 text-lg md:text-xl 2xl:text-2xl">
-          <span class="title font-semibold">Availability...</span>
+        <div class="flex flex-col w-full items-center gap-4 text-xl 2xl:text-2xl">
+          <span class="title font-semibold">{{ $t('profile.availability') }}...</span>
 
           <ul class="grid w-full text-sm md:text-base 2xl:text-lg gap-2 grid-cols-2 font-medium">
             <li class="text-nowrap overflow-x-hidden truncate">
-              Work Type: <span class="title font-semibold">Full-time</span>
+              {{ $t('profile.work-type') }}:
+              <span class="title font-semibold">{{ $t('profile.work-type-value') }}</span>
             </li>
             <li class="text-nowrap overflow-x-hidden truncate">
-              Remote Work: <span class="title font-semibold truncate">Absolutely!</span>
+              {{ $t('profile.remote-work') }}:
+              <span class="title font-semibold truncate">{{
+                $t('profile.remote-work-value')
+              }}</span>
             </li>
             <li class="text-nowrap overflow-x-hidden truncate">
-              Relocation: <span class="title font-semibold truncate">Yes</span>
+              {{ $t('profile.relocation') }}:
+              <span class="title font-semibold truncate">{{ $t('profile.relocation-value') }}</span>
             </li>
             <li class="text-nowrap overflow-x-hidden truncate">
-              Status: <span class="title font-semibold truncate">Actively Looking</span>
+              {{ $t('profile.status') }}:
+              <span class="title font-semibold truncate">{{ $t('profile.available') }}</span>
             </li>
           </ul>
         </div>

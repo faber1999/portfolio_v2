@@ -37,7 +37,7 @@ watch(
       -
       <span>{{ props.value }}%</span>
     </div>
-    <div class="w-full h-3 bg-primary rounded-full overflow-hidden">
+    <div class="w-full h-1 bg-primary rounded-full overflow-hidden">
       <div
         class="h-full rounded-full bg-gradient-to-r from-secondary to-tertiary"
         :style="{ width: animatedProgress + '%' }"
