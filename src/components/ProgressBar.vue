@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { shallowRef, onMounted } from 'vue'
-import { useTransition } from '@vueuse/core'
+import { shallowRef, useTemplateRef } from 'vue'
+import { useIntersectionObserver, useTransition } from '@vueuse/core'
+
+const target = useTemplateRef<HTMLDivElement>('progressTarget')
 
 const props = defineProps({
   value: {
@@ -17,15 +19,19 @@ const props = defineProps({
 const progress = shallowRef(0)
 const animatedProgress = useTransition(progress, { duration: 1250 })
 
-// Cuando cambia la prop value se reinicia la animación
-onMounted(() => {
-  progress.value = props.value
+useIntersectionObserver(target, ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    progress.value = props.value
+  }
 })
 </script>
 
 <template>
   <!-- Al asignar :key="colorMode.value" se fuerza la remount al cambiar el color mode -->
-  <div class="w-full flex flex-col gap-2 bg-gray-50 p-4 rounded-lg dark:bg-gray-50/5">
+  <div
+    ref="progressTarget"
+    class="w-full flex flex-col gap-2 bg-gray-50 p-4 rounded-lg dark:bg-gray-50/5"
+  >
     <div class="flex gap-2 font-semibold">
       <span>{{ text }}</span>
       -
