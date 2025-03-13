@@ -1,9 +1,10 @@
-import AboutView from '@/views/AboutView.vue'
+import ExperienceView from '@/views/experience/ExperienceView.vue'
 import EducationView from '@/views/education/EducationView.vue'
 import PageNotFound from '@/views/PageNotFound.vue'
 import type { Component } from 'vue'
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import ProfileView from '../views/profile/ProfileView.vue'
+import ProjectsView from '@/views/projects/ProjectsView.vue'
 
 interface AppRoute extends Omit<RouteRecordRaw, 'meta'> {
   meta?: {
@@ -28,7 +29,7 @@ export const routes: AppRoute[] = [
   {
     path: '/projects',
     name: 'projects',
-    component: AboutView,
+    component: ProjectsView,
     meta: {
       icon: () => import('@/components/icons/IconProjects.vue'),
       title: 'Projects',
@@ -38,7 +39,7 @@ export const routes: AppRoute[] = [
   {
     path: '/experience',
     name: 'experience',
-    component: AboutView,
+    component: ExperienceView,
     meta: {
       icon: () => import('@/components/icons/IconWorkBag.vue'),
       transition: 'slide-right',
