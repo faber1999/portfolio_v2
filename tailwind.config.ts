@@ -4,15 +4,12 @@ import animate from 'tailwindcss-animate'
 
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: 'selector',
+  darkMode: 'class',
   safelist: ['dark'],
   prefix: '',
   theme: {
     extend: {
       colors: {
-        'bg-gradient-start': 'var(--bg-gradient-start)',
-        'bg-gradient-end': 'var(--bg-gradient-end)',
-
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import ContentUnderConstruction from '@/components/ContentUnderConstruction.vue'
+// import ContentUnderConstruction from '@/components/ContentUnderConstruction.vue'
 import FlipWords from '@/components/inspira-ui/FlipWords.vue'
 import DottedMap from './components/DottedMap.vue'
+import SkillsResume from './components/SkillsResume.vue'
 </script>
 
 <template>
@@ -9,7 +10,7 @@ import DottedMap from './components/DottedMap.vue'
     <div class="relative bg-tertiary rounded-lg w-full xl:w-1/2 xl:h-auto xl:overflow-hidden">
       <!-- <BorderBeam :size="250" :duration="12" :delay="9" :border-width="2" /> -->
 
-      <div class="flex size-full justify-center dark:text-white p-4 md:p-12 xl:overflow-y-active">
+      <div class="flex justify-center dark:text-white p-4 md:p-12 xl:overflow-y-active">
         <div class="flex flex-col gap-10">
           <div class="flex flex-col md:flex-row w-full self-center items-center gap-10">
             <img
@@ -68,12 +69,13 @@ import DottedMap from './components/DottedMap.vue'
 
     <div class="flex w-full flex-col gap-4 xl:w-1/2 xl:h-auto">
       <div
-        class="relative overflow-hidden flex size-full rounded-lg justify-center items-center dark:text-white"
+        class="flex xl:flex-1 flex-col gap-4 bg-tertiary min-h-96 relative overflow-y-auto rounded-lg justify-evenly items-center dark:text-white p-4 md:min-h-60"
       >
-        <ContentUnderConstruction />
+        <SkillsResume />
       </div>
+
       <div
-        class="flex flex-col gap-4 bg-tertiary min-h-96 relative overflow-hidden size-full rounded-lg justify-evenly items-center dark:text-white p-4 md:min-h-60"
+        class="flex xl:flex-1 flex-col gap-4 bg-tertiary min-h-96 relative overflow-hidden rounded-lg justify-evenly items-center dark:text-white p-4 md:min-h-60"
       >
         <div class="flex flex-col w-full items-center gap-4 text-lg md:text-xl 2xl:text-2xl">
           <span class="title font-semibold">Availability...</span>
