@@ -170,6 +170,7 @@ function clearContext() {
 function drawParticles() {
   clearContext()
   const particleCount = props.quantity
+
   for (let i = 0; i < particleCount; i++) {
     const circle = circleParams()
     drawCircle(circle)

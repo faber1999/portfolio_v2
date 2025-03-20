@@ -33,9 +33,9 @@ const { isMobile } = useDeviceType()
 
     <ParticlesBg
       class="absolute z-0 size-full"
-      :quantity="isMobile ? 150 : 500"
+      :quantity="isMobile ? 150 : 300"
       :ease="100"
-      :color="isDark ? '#404040' : '#8b8b8b'"
+      :color="isDark ? '#404040' : '#adadad'"
       :staticity="20"
       refresh
     />

@@ -1,20 +1,8 @@
-import { onMounted, ref } from 'vue'
+import { useMediaQuery } from '@vueuse/core'
 
 export function useDeviceType() {
-  const isMobile = ref(false)
-
-  const detectDeviceType = () => {
-    const userAgent = navigator.userAgent || navigator.vendor
-
-    // Detecta dispositivos móviles basados en el User-Agent
-    isMobile.value = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
-      userAgent,
-    )
-  }
-
-  onMounted(() => {
-    detectDeviceType()
-  })
+  // Define el breakpoint a 768px (puedes ajustar este valor)
+  const isMobile = useMediaQuery('(max-width: 768px)')
 
   return { isMobile }
 }
