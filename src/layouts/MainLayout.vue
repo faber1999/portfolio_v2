@@ -2,9 +2,12 @@
 import ParticlesBg from '@/components/inspira-ui/ParticlesBg.vue'
 import MyAside from '@/components/MyAside.vue'
 import MyHeader from '@/components/MyHeader.vue'
+import { useDeviceType } from '@/composables/useDeviceType'
 import { useDark } from '@vueuse/core'
 
 const isDark = useDark()
+
+const { isMobile } = useDeviceType()
 </script>
 
 <template>
@@ -30,7 +33,7 @@ const isDark = useDark()
 
     <ParticlesBg
       class="absolute z-0 size-full"
-      :quantity="500"
+      :quantity="isMobile ? 150 : 500"
       :ease="100"
       :color="isDark ? '#404040' : '#8b8b8b'"
       :staticity="20"
