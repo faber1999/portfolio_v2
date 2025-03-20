@@ -20,7 +20,7 @@ import SkillsResume from './components/SkillsResume.vue'
             />
 
             <div
-              class="flex flex-col text-center font-semibold gap-2 text-xl md:text-start 2xl:text-2xl"
+              class="flex flex-col text-center font-semibold gap-2 md:gap-4 text-xl md:text-start 2xl:text-2xl"
             >
               <span>
                 {{ $t('profile.title') }}
@@ -91,10 +91,10 @@ import SkillsResume from './components/SkillsResume.vue'
               {{ $t('profile.relocation') }}:
               <span class="title font-semibold truncate">{{ $t('profile.relocation-value') }}</span>
             </li>
-            <li class="text-nowrap overflow-x-hidden truncate">
+            <!-- <li class="text-nowrap overflow-x-hidden truncate">
               {{ $t('profile.status') }}:
               <span class="title font-semibold truncate">{{ $t('profile.available') }}</span>
-            </li>
+            </li> -->
           </ul>
         </div>
 

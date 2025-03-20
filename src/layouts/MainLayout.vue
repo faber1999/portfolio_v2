@@ -2,6 +2,9 @@
 import ParticlesBg from '@/components/inspira-ui/ParticlesBg.vue'
 import MyAside from '@/components/MyAside.vue'
 import MyHeader from '@/components/MyHeader.vue'
+import { useDark } from '@vueuse/core'
+
+const isDark = useDark()
 </script>
 
 <template>
@@ -27,9 +30,9 @@ import MyHeader from '@/components/MyHeader.vue'
 
     <ParticlesBg
       class="absolute z-0 size-full"
-      :quantity="150"
+      :quantity="500"
       :ease="100"
-      color="#8b8b8b"
+      :color="isDark ? '#404040' : '#8b8b8b'"
       :staticity="20"
       refresh
     />
