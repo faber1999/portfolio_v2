@@ -14,7 +14,7 @@ import SkillsResume from './components/SkillsResume.vue'
         <div class="flex flex-col gap-10">
           <div class="flex flex-col md:flex-row w-full self-center items-center gap-10">
             <img
-              src="/images/profile.webp"
+              src="/images/profile.avif"
               alt="Profile"
               class="rounded-full size-44 brightness-125 saturate-[1.20] 2xl:size-60 shadow-2xl dark:shadow-sm"
             />

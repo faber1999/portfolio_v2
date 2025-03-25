@@ -7,7 +7,6 @@ import IconEn from './icons/IconEn.vue'
 import IconEs from './icons/IconEs.vue'
 import IconMoon from './icons/IconMoon.vue'
 import IconSun from './icons/IconSun.vue'
-import HyperText from './inspira-ui/HyperText.vue'
 
 const { locale } = useI18n()
 
@@ -29,12 +28,9 @@ const changeLang = () => {
 <template>
   <header class="flex flex-row justify-between items-center relative h-16 p-4 text-primary">
     <div class="flex items-center gap-2">
-      <HyperText
-        :text="$t('header.portfolio')"
-        class="my-8 text-2xl md:text-3xl lg:text-4xl title font-medium"
-        :duration="800"
-        :animate-on-hover="true"
-      />
+      <span class="my-8 text-2xl md:text-3xl lg:text-4xl title font-medium">
+        {{ $t('header.portfolio') }}
+      </span>
     </div>
 
     <div class="flex gap-0 lg:gap-2">

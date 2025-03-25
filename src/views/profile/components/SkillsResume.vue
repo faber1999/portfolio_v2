@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { type Skill } from './SkillKnobItem.vue'
-import SkillProgressItem from './SkillProgressItem.vue'
+import SkillProgressItem, { type Skill } from './SkillProgressItem.vue'
 
 const skills: Skill[] = [
   {
