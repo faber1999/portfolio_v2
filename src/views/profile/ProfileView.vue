@@ -4,7 +4,6 @@ import FlipWords from '@/components/inspira-ui/FlipWords.vue'
 import SkillsResume from './components/SkillsResume.vue'
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
-import IconLangs from '@/components/icons/IconLangs.vue'
 
 const { locale } = useI18n()
 
@@ -42,7 +41,7 @@ const whatsappTranslatedMsg = computed(() => {
 
               <a
                 download
-                href="https://drive.google.com/uc?export=download&id=1MrfLoPZjHkhIrxQzbhfMdLUqU4ZI-yyR"
+                href="https://drive.google.com/uc?export=download&id=1j0rDlFk4bUIquDW9fZSR5CV4V9pmxJKO"
                 class="relative font-bold title w-fit cursor-pointer self-center md:self-start"
               >
                 {{ $t('profile.download-cv') }}
