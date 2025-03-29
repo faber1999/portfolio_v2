@@ -78,7 +78,7 @@ const whatsappTranslatedMsg = computed(() => {
             </span>
           </div>
 
-          <hr class="border-gray-500" />
+          <hr class="border-black/20 dark:border-white/15" />
 
           <div>
             <h2 class="title text-xl 2xl:text-2xl font-semibold mb-4">
@@ -87,7 +87,7 @@ const whatsappTranslatedMsg = computed(() => {
 
             <!-- Added grid for languages -->
             <div class="grid grid-cols-2 gap-4">
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col">
                 <span class="text-lg font-semibold dark:text-white">
                   {{ $t('profile.spanish') }}
                 </span>
@@ -96,7 +96,7 @@ const whatsappTranslatedMsg = computed(() => {
                 </span>
               </div>
 
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col">
                 <span class="text-lg font-semibold dark:text-white">
                   {{ $t('profile.english') }}
                 </span>
@@ -105,7 +105,7 @@ const whatsappTranslatedMsg = computed(() => {
             </div>
           </div>
 
-          <hr class="border-gray-500" />
+          <hr class="border-black/20 dark:border-white/15" />
 
           <div class="flex flex-col gap-8 2xl:text-xl">
             <div>
