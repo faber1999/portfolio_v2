@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import IconBuilderStar from '@/components/icons/IconBuilderStar.vue'
 import ExperienceItem from './components/ExperienceItem.vue'
+import ContentUnderConstruction from '@/components/ContentUnderConstruction.vue'
 
 const experience = [
   {
@@ -25,7 +26,9 @@ const experience = [
 </script>
 
 <template>
-  <div class="flex flex-col flex-1 h-fit min-h-full gap-4 xl:flex-row max-h-full">
+  <ContentUnderConstruction />
+
+  <!-- <div class="flex flex-col flex-1 h-fit min-h-full gap-4 xl:flex-row max-h-full">
     <div class="flex flex-col gap-6 bg-tertiary p-4 rounded-lg w-full">
       <div
         class="flex flex-col items-center gap-2 text-primary self-center text-xl md:flex-row md:text-2xl lg:text-3xl"
@@ -41,5 +44,5 @@ const experience = [
         <ExperienceItem v-for="item in experience" :key="item.position" v-bind="item" />
       </ol>
     </div>
-  </div>
+  </div> -->
 </template>
