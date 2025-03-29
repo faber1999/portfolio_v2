@@ -15,7 +15,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="size-full">
+  <div>
     <ProgressBar :value="skill.level" :text="skill.name" />
   </div>
 </template>

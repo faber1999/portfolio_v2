@@ -12,10 +12,18 @@
   },
   "profile": {
     "availability": "Disponibilidad",
-    "available": "Disponible",
+    "city": "Ciudad",
+    "contact-info": "Información de contacto",
+    "country": "País",
     "current-location": "Ubicado en: Armenia, Quindío, Colombia",
     "description-1": "Soy Ingeniero de Sistemas con +6 años de experiencia en desarrollo de software, especializado en desarrollo de aplicaciones web.",
     "description-2": "Apasionado por las tecnologías frontend como React y Vue, busco constantemente optimizar la experiencia del usuario y entregar soluciones escalables. Mi objetivo es liderar proyectos innovadores que impacten positivamente la vida de las personas.",
+    "download-cv": "Descargar CV",
+    "email": "Correo electrónico",
+    "github": "GitHub",
+    "languages": "Idiomas",
+    "linkedin": "LinkedIn",
+    "location": "Ubicación",
     "main-skills": "Habilidades principales",
     "relocation-value": "Sí",
     "relocation": "Reubicación",
@@ -24,6 +32,7 @@
     "status-value": "Disponible para trabajar",
     "status": "Estado",
     "technical-skills": "Habilidades técnicas",
+    "timezone": "Zona horaria",
     "title": "Hola, soy Faber Grajales",
     "work-type-value": "Tiempo completo",
     "work-type": "Tipo de trabajo"
@@ -40,6 +49,18 @@
     "courses-certifications": "Cursos y Certificaciones",
     "view-credential": "Ver Credencial",
     "credential-id": "ID de la Credencial"
+  },
+  "experience": {
+    "work-experience": "Experiencia Laboral",
+    "position": "Cargo",
+
+    "job-1-position": "Auxiliar contable y administrativa",
+    "job-1-description-1": "Lideré la optimización del registro y control contable, implementé mejoras en la gestión de inventarios, proveedores y logística, lo que permitió una mayor eficiencia en la cadena de suministros y una reducción del 20% en costos operativos.",
+    "job-1-description-2": "Además, desarrollé estrategias para expandir la venta de productos, aumentando las ventas en un 25%.",
+
+    "job-2-position": "Asistente administrativa",
+    "job-2-description-1": "Mejoré la eficiencia en el manejo de efectivo y atención al cliente, agilizando los procesos financieros y reduciendo los tiempos de espera en un 20%",
+    "job-2-description-2": "Apoyé en procesos administrativos internos y control documental, garantizando precisión, confidencialidad y cumplimiento de procedimientos establecidos."
   },
   "months": {
     "january": "Enero",

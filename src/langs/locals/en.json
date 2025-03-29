@@ -12,10 +12,21 @@
   },
   "profile": {
     "availability": "Availability",
-    "available": "Available",
+    "city": "Ciudad",
+    "contact-info": "Contact Information",
+    "country": "País",
     "current-location": "Located: Armenia, Quindío, Colombia",
     "description-1": "I am a Systems Engineer with +6 years of experience in software development, specialized in web application development.",
     "description-2": "Passionate about frontend technologies like React and Vue, I constantly seek to optimize the user experience and deliver scalable solutions. My goal is to lead innovative projects that positively impact people's lives.",
+    "download-cv": "Download CV",
+    "spanish": "Español",
+    "english": "English",
+    "native": "Native",
+    "email": "Email",
+    "github": "GitHub",
+    "languages": "Languages",
+    "linkedin": "LinkedIn",
+    "location": "Location",
     "main-skills": "Main skills",
     "relocation-value": "Yes",
     "relocation": "Relocation",
@@ -24,6 +35,7 @@
     "status-value": "Available to work",
     "status": "Status",
     "technical-skills": "Technical skills",
+    "timezone": "Zona horaria",
     "title": "Hey, I'm Faber Grajales",
     "work-type-value": "Full-time",
     "work-type": "Work type"
@@ -40,6 +52,18 @@
     "courses-certifications": "Courses and Certifications",
     "view-credential": "View Credential",
     "credential-id": "Credential ID"
+  },
+  "experience": {
+    "work-experience": "Work Experience",
+    "position": "Position",
+
+    "job-1-position": "Accounting and Administrative Assistant",
+    "job-1-description-1": "I led the optimization of accounting records and control, implemented improvements in inventory management, suppliers, and logistics, which allowed greater efficiency in the supply chain and a 20% reduction in operating costs.",
+    "job-1-description-2": "In addition, I developed strategies to expand the sale of products, increasing sales by 25%.",
+
+    "job-2-position": "Administrative Assistant",
+    "job-2-description-1": "I improved efficiency in cash management and customer service, streamlining financial processes and reducing waiting times by 20%",
+    "job-2-description-2": "I supported internal administrative processes and document control, ensuring accuracy, confidentiality, and compliance with established procedures."
   },
   "months": {
     "january": "January",

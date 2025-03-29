@@ -40,9 +40,7 @@ const sortedSkills = skills.sort((a, b) => b.level - a.level)
 </script>
 
 <template>
-  <h1 class="title text-xl 2xl:text-2xl font-semibold">{{ $t('profile.technical-skills') }}</h1>
-
-  <div class="flex flex-col flex-grow w-full gap-4">
+  <div class="flex flex-col flex-grow w-full gap-6">
     <SkillProgressItem v-for="skill in sortedSkills" :key="skill.name" :skill="skill" />
   </div>
 </template>
