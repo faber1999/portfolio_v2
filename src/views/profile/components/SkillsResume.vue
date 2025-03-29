@@ -40,7 +40,7 @@ const sortedSkills = skills.sort((a, b) => b.level - a.level)
 </script>
 
 <template>
-  <div class="flex flex-col flex-grow w-full gap-6">
+  <div class="grid lg:grid-cols-2 flex-grow w-full gap-6">
     <SkillProgressItem v-for="skill in sortedSkills" :key="skill.name" :skill="skill" />
   </div>
 </template>

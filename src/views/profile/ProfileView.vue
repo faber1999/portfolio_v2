@@ -19,11 +19,11 @@ const whatsappTranslatedMsg = computed(() => {
 </script>
 
 <template>
-  <div class="flex flex-col flex-1 h-full min-h-full gap-4 xl:flex-row">
-    <div class="relative bg-tertiary rounded-lg w-full xl:w-1/2 xl:h-auto xl:overflow-y-active">
-      <div class="flex justify-center dark:text-white p-4 md:p-12">
-        <div class="flex flex-col gap-8 w-full">
-          <div class="flex flex-col md:flex-row w-full self-center items-center gap-6">
+  <div class="flex flex-col flex-1 h-full min-h-full gap-4">
+    <div class="bg-tertiary rounded-lg xl:h-auto">
+      <div class="flex justify-center p-4 md:p-12 dark:text-white">
+        <div class="flex flex-col gap-8">
+          <div class="flex flex-col md:flex-row self-center md:self-start items-center gap-6">
             <img
               src="/images/profile.avif"
               alt="Profile"
@@ -45,10 +45,7 @@ const whatsappTranslatedMsg = computed(() => {
                 class="relative font-bold title w-fit cursor-pointer self-center md:self-start"
               >
                 {{ $t('profile.download-cv') }}
-                <span
-                  class="absolute bottom-0 left-0 w-full h-[2px] title-decorator"
-                  aria-hidden="true"
-                />
+                <span class="absolute bottom-0 left-0 h-[2px] title-decorator" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -80,34 +77,7 @@ const whatsappTranslatedMsg = computed(() => {
 
           <hr class="border-black/20 dark:border-white/15" />
 
-          <div>
-            <h2 class="title text-xl 2xl:text-2xl font-semibold mb-4">
-              {{ $t('profile.languages') }}
-            </h2>
-
-            <!-- Added grid for languages -->
-            <div class="grid grid-cols-2 gap-4">
-              <div class="flex flex-col">
-                <span class="text-lg font-semibold dark:text-white">
-                  {{ $t('profile.spanish') }}
-                </span>
-                <span class="text-sm dark:text-white">
-                  {{ $t('profile.native') }}
-                </span>
-              </div>
-
-              <div class="flex flex-col">
-                <span class="text-lg font-semibold dark:text-white">
-                  {{ $t('profile.english') }}
-                </span>
-                <span class="text-sm dark:text-white">B1</span>
-              </div>
-            </div>
-          </div>
-
-          <hr class="border-black/20 dark:border-white/15" />
-
-          <div class="flex flex-col gap-8 2xl:text-xl">
+          <div class="grid lg:grid-cols-2 gap-6 2xl:text-xl">
             <div>
               <h2 class="title text-xl 2xl:text-2xl font-semibold mb-4">
                 {{ $t('profile.contact-info') }}
@@ -165,52 +135,76 @@ const whatsappTranslatedMsg = computed(() => {
               </ul>
             </div>
           </div>
+
+          <hr class="border-black/20 dark:border-white/15" />
+
+          <div>
+            <h2 class="title text-xl 2xl:text-2xl font-semibold mb-4">
+              {{ $t('profile.languages') }}
+            </h2>
+
+            <!-- Added grid for languages -->
+            <div class="grid grid-cols-2 gap-4">
+              <div class="flex flex-col">
+                <span class="text-lg font-semibold dark:text-white">
+                  {{ $t('profile.spanish') }}
+                </span>
+                <span class="text-sm dark:text-white">
+                  {{ $t('profile.native') }}
+                </span>
+              </div>
+
+              <div class="flex flex-col">
+                <span class="text-lg font-semibold dark:text-white">
+                  {{ $t('profile.english') }}
+                </span>
+                <span class="text-sm dark:text-white">B1</span>
+              </div>
+            </div>
+          </div>
+
+          <hr class="border-black/20 dark:border-white/15" />
+
+          <div class="flex flex-col 2xl:text-xl">
+            <h2 class="title text-xl 2xl:text-2xl font-semibold mb-4">
+              {{ $t('profile.availability') }}
+            </h2>
+
+            <ul class="grid gap-2 grid-cols-2">
+              <li class="text-nowrap overflow-x-hidden truncate">
+                {{ $t('profile.status') }}:
+                <span class="title font-semibold truncate">{{ $t('profile.status-value') }}!</span>
+              </li>
+              <li class="text-nowrap overflow-x-hidden truncate">
+                {{ $t('profile.work-type') }}:
+                <span class="title font-semibold">{{ $t('profile.work-type-value') }}</span>
+              </li>
+              <li class="text-nowrap overflow-x-hidden truncate">
+                {{ $t('profile.remote-work') }}:
+                <span class="title font-semibold truncate">{{
+                  $t('profile.remote-work-value')
+                }}</span>
+              </li>
+              <li class="text-nowrap overflow-x-hidden truncate">
+                {{ $t('profile.relocation') }}:
+                <span class="title font-semibold truncate">{{
+                  $t('profile.relocation-value')
+                }}</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="flex w-full flex-col gap-4 xl:w-1/2 xl:h-auto">
-      <div
-        class="flex xl:flex-shrink flex-col gap-4 bg-tertiary relative xl:overflow-y-active rounded-lg dark:text-white p-4 md:p-12"
-      >
-        <div class="flex flex-col gap-6 2xl:text-xl">
-          <h2 class="title text-xl 2xl:text-2xl font-semibold mb-4">
-            {{ $t('profile.availability') }}...
-          </h2>
+    <div class="flex flex-col bg-tertiary rounded-lg p-4 gap-6 md:p-12 2xl:text-xl dark:text-white">
+      <h2 class="title text-xl 2xl:text-2xl font-semibold">
+        {{ $t('profile.technical-skills') }}
+      </h2>
 
-          <ul class="grid w-full text-sm md:text-base 2xl:text-2xl gap-2 grid-cols-2">
-            <li class="text-nowrap overflow-x-hidden truncate">
-              {{ $t('profile.status') }}:
-              <span class="title font-semibold truncate">{{ $t('profile.status-value') }}!</span>
-            </li>
-            <li class="text-nowrap overflow-x-hidden truncate">
-              {{ $t('profile.work-type') }}:
-              <span class="title font-semibold">{{ $t('profile.work-type-value') }}</span>
-            </li>
-            <li class="text-nowrap overflow-x-hidden truncate">
-              {{ $t('profile.remote-work') }}:
-              <span class="title font-semibold truncate">{{
-                $t('profile.remote-work-value')
-              }}</span>
-            </li>
-            <li class="text-nowrap overflow-x-hidden truncate">
-              {{ $t('profile.relocation') }}:
-              <span class="title font-semibold truncate">{{ $t('profile.relocation-value') }}</span>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <hr class="border-black/20 dark:border-white/15" />
 
-      <div
-        class="flex xl:flex-1 flex-col gap-4 bg-tertiary relative xl:overflow-y-active rounded-lg dark:text-white p-4 md:p-12"
-      >
-        <div class="flex flex-col gap-6 2xl:text-xl">
-          <h2 class="title text-xl 2xl:text-2xl font-semibold mb-4">
-            {{ $t('profile.technical-skills') }}
-          </h2>
-          <SkillsResume />
-        </div>
-      </div>
+      <SkillsResume />
     </div>
   </div>
 </template>
