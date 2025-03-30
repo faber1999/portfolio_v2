@@ -16,6 +16,17 @@ const whatsappTranslatedMsg = computed(() => {
 
   return encodeURIComponent(messageToReturn)
 })
+
+const cvLink = computed(() => {
+  const baseUrl = 'https://drive.google.com/uc?export=download&id='
+  let fileId = '1j0rDlFk4bUIquDW9fZSR5CV4V9pmxJKO'
+
+  if (locale.value === 'en') {
+    fileId = '16OAbeOGTiEYngzwPwg1j67M_xtBDXUUc'
+  }
+
+  return `${baseUrl}${fileId}`
+})
 </script>
 
 <template>
@@ -41,7 +52,7 @@ const whatsappTranslatedMsg = computed(() => {
 
               <a
                 download
-                href="https://drive.google.com/uc?export=download&id=1j0rDlFk4bUIquDW9fZSR5CV4V9pmxJKO"
+                :href="cvLink"
                 class="relative font-bold title w-fit cursor-pointer self-center md:self-start"
               >
                 {{ $t('profile.download-cv') }}
