@@ -56,14 +56,19 @@
   "experience": {
     "work-experience": "Experiencia Laboral",
     "position": "Cargo",
+    "current": "Actual",
 
-    "job-1-position": "Auxiliar contable y administrativa",
-    "job-1-description-1": "Lideré la optimización del registro y control contable, implementé mejoras en la gestión de inventarios, proveedores y logística, lo que permitió una mayor eficiencia en la cadena de suministros y una reducción del 20% en costos operativos.",
-    "job-1-description-2": "Además, desarrollé estrategias para expandir la venta de productos, aumentando las ventas en un 25%.",
+    "job-1-position": "Desarrollador de aplicaciones web",
+    "job-1-description-1": "Desarrollé e implementé aplicaciones web para clientes reconocidos, integrando APIs REST y gestionando bases de datos para optimizar procesos.",
+    "job-1-description-2": "Responsable del mantenimiento, soporte y diseño de servicios web con ETLs, asegurando una integración eficaz y soluciones escalables.",
 
-    "job-2-position": "Asistente administrativa",
-    "job-2-description-1": "Mejoré la eficiencia en el manejo de efectivo y atención al cliente, agilizando los procesos financieros y reduciendo los tiempos de espera en un 20%",
-    "job-2-description-2": "Apoyé en procesos administrativos internos y control documental, garantizando precisión, confidencialidad y cumplimiento de procedimientos establecidos."
+    "job-2-position": "Consultor de Soluciones III",
+    "job-2-description-1": "Lideré la evaluación de viabilidad de clientes para la adquisición de nuevos servicios en un proyecto del Banco Popular, analizando comportamientos crediticios y registros en centrales de riesgos.",
+    "job-2-description-2": "Implementé optimizaciones en el sistema y desarrollé un HealthChecker para monitorizar el estado y la disponibilidad de los servicios.",
+
+    "job-3-position": "Líder de desarrollo",
+    "job-3-description-1": "Como líder de desarrollo, propongo y elaboro soluciones tecnológicas integrales, mentorando al equipo y desarrollando componentes robustos (como un generador de encuestas Drag and Drop, reportería dinámica y filtros de jerarquías) que incluyen sistemas de internacionalización.",
+    "job-3-description-2": "Implemento buenas prácticas de Clean Code a través de Code Reviews y Pair Programming, coordinando flujos completos (Frontend, Backend y DB) y participando en comités para evaluar y definir nuevos requerimientos, garantizando altos estándares de calidad."
   },
   "months": {
     "january": "Enero",

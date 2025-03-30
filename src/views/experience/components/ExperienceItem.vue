@@ -2,7 +2,11 @@
 interface Props {
   position: string
   company: string
-  period: number[]
+  period: {
+    month?: string
+    year?: number
+    isCurrent?: boolean
+  }[]
   descriptions: string[]
 }
 
@@ -29,8 +33,12 @@ defineProps<Props>()
             {{ company }}
           </span>
 
-          <time class="p-0 m-0 text-sm text-gray-800 dark:text-white/80"
-            >{{ `${period[0]} - ${period[1]}` }}
+          <time class="p-0 m-0 text-sm text-gray-800 dark:text-white/80">
+            <span v-for="(item, index) in period" :key="index">
+              <span v-if="item.month">{{ $t(item.month) }} {{ item.year }}</span>
+              <span v-if="item.isCurrent">{{ $t('experience.current') }}</span>
+              <span v-if="index !== period.length - 1"> - </span>
+            </span>
           </time>
         </div>
       </div>
