@@ -4,43 +4,41 @@ import SkillProgressItem, { type Skill } from './SkillProgressItem.vue'
 const skills: Skill[] = [
   {
     name: 'JavaScript',
-    level: 90,
+    level: 'advanced',
   },
   {
     name: 'TypeScript',
-    level: 85,
+    level: 'advanced',
   },
   {
     name: 'Vue.js',
-    level: 80,
+    level: 'intermediate',
   },
   {
     name: 'React.js',
-    level: 90,
+    level: 'expert',
   },
   {
     name: 'Nest.js',
-    level: 70,
+    level: 'intermediate',
   },
   {
     name: 'Sql Server',
-    level: 90,
+    level: 'expert',
   },
   {
     name: 'Git',
-    level: 80,
+    level: 'intermediate',
   },
   {
     name: 'C#',
-    level: 60,
+    level: 'intermediate',
   },
 ]
-
-const sortedSkills = skills.sort((a, b) => b.level - a.level)
 </script>
 
 <template>
   <div class="grid lg:grid-cols-2 flex-grow w-full gap-6">
-    <SkillProgressItem v-for="skill in sortedSkills" :key="skill.name" :skill="skill" />
+    <SkillProgressItem v-for="skill in skills" :key="skill.name" :skill="skill" />
   </div>
 </template>

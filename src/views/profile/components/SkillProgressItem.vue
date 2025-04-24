@@ -1,9 +1,12 @@
 <script setup lang="ts">
-import ProgressBar from '@/components/ProgressBar.vue'
+// import ProgressBar from '@/components/ProgressBar.vue'
+import SkillBar from '@/components/SkillBar.vue'
+
+export type SkillLevel = 'beginner' | 'intermediate' | 'advanced' | 'expert'
 
 export interface Skill {
   name: string
-  level: number
+  level: SkillLevel
 }
 
 defineProps({
@@ -16,6 +19,7 @@ defineProps({
 
 <template>
   <div>
-    <ProgressBar :value="skill.level" :text="skill.name" />
+    <SkillBar :value="skill.level" :text="skill.name" />
+    <!-- <ProgressBar :value="skill.level" :text="skill.name" /> -->
   </div>
 </template>
