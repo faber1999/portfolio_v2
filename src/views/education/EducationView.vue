@@ -27,6 +27,15 @@ const higherEducation = [
 
 const coursesCertifications = [
   {
+    title: 'Certified Mid-Level Vue.js Developer',
+    month: 'months.april',
+    year: 2025,
+    platformName: 'certificates.dev',
+    credentialId: '9eca4a05-ecb4-42ca-9bb0-74d01de66fc9',
+    certificationUrl:
+      'https://certificates.dev/vuejs/certificates/9eca4a05-ecb4-42ca-9bb0-74d01de66fc9',
+  },
+  {
     title: 'TypeScript: Tu completa guía y manual de mano',
     month: 'months.may',
     year: 2024,
