@@ -12,7 +12,7 @@ const skills: Skill[] = [
   },
   {
     name: 'Vue.js',
-    level: 'intermediate',
+    level: 'advanced',
   },
   {
     name: 'React.js',
