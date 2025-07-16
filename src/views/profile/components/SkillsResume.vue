@@ -34,6 +34,22 @@ const skills: Skill[] = [
     name: 'C#',
     level: 'intermediate',
   },
+  {
+    name: 'Node.js',
+    level: 'intermediate',
+  },
+  {
+    name: 'Jenkins',
+    level: 'beginner',
+  },
+  {
+    name: 'n8n',
+    level: 'beginner',
+  },
+  {
+    name: 'supabase',
+    level: 'intermediate',
+  },
 ]
 </script>
 

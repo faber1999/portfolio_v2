@@ -36,6 +36,14 @@ const educationItems = {
     component: CourseOrCertificate,
     items: [
       {
+        title: 'English EF SET Certificate - 51/100 - B2 Upper Intermediate',
+        month: 'months.july',
+        year: 2025,
+        platformName: 'EF SET',
+        credentialId: 'frXDBk',
+        certificationUrl: 'https://cert.efset.org/frXDBk',
+      },
+      {
         title: 'Certified Mid-Level Vue.js Developer',
         month: 'months.april',
         year: 2025,

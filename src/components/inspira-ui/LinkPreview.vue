@@ -26,7 +26,17 @@
         <div
           class="block rounded-xl border-2 border-transparent bg-white p-1 shadow-lg dark:bg-gray-900"
         >
+          <!-- Spinner while loading -->
+          <div v-if="isLoading" class="flex items-center justify-center" :style="imageStyle">
+            <div
+              class="animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 dark:border-gray-600 dark:border-t-blue-400"
+              style="width: 24px; height: 24px"
+            ></div>
+          </div>
+
+          <!-- Image -->
           <img
+            v-else
             :src="previewSrc"
             :width="width"
             :height="height"
@@ -43,7 +53,7 @@
 
 <script setup lang="ts">
 import { cn } from '@/lib/utils'
-import { computed, reactive, ref, type CSSProperties } from 'vue'
+import { computed, onMounted, reactive, ref, type CSSProperties } from 'vue'
 
 interface BaseProps {
   class?: string
@@ -162,6 +172,33 @@ function hidePreview() {
 function handleImageLoad() {
   isLoading.value = false
 }
+
+// Preload image on component mount
+function preloadImage() {
+  if (!props.isStatic && props.url) {
+    const img = new Image()
+    img.onload = () => {
+      isLoading.value = false
+    }
+    img.onerror = () => {
+      isLoading.value = false
+    }
+    img.src = previewSrc.value
+  } else if (props.isStatic && props.imageSrc) {
+    const img = new Image()
+    img.onload = () => {
+      isLoading.value = false
+    }
+    img.onerror = () => {
+      isLoading.value = false
+    }
+    img.src = props.imageSrc
+  }
+}
+
+onMounted(() => {
+  preloadImage()
+})
 </script>
 
 <style scoped>
