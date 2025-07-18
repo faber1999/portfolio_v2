@@ -27,7 +27,7 @@ jobs:
         run: pnpm install
 
       - name: Build project
-        run: npm run build # Asegúrate de que este comando genere la carpeta dist
+        run: pnpm build # Asegúrate de que este comando genere la carpeta dist
 
       # 3. Eliminar archivos antiguos en el servidor FTP
       - name: Delete specific files and folders over FTP
