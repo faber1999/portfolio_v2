@@ -114,7 +114,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Connect with Me
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue)](https://www.linkedin.com/in/faber-grajales-hincapié-3919b6198/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue)](https://www.linkedin.com/in/faber1999/)
 [![Github](https://img.shields.io/badge/Github-black?logo=github)](https://github.com/faber1999)
 
 [![Instagram](https://img.shields.io/badge/Instagram-fd0a83?logo=instagram)](https://www.instagram.com/faber.grajales/)

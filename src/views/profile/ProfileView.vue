@@ -117,7 +117,7 @@ const cvLink = computed(() => {
                     class="font-normal underline underline-offset-[5px]"
                     aria-label="LinkedIn Profile"
                     target="_blank"
-                    href="https://www.linkedin.com/in/faber-grajales-hincapi%C3%A9-3919b6198/"
+                    href="https://www.linkedin.com/in/faber1999/"
                   >
                     LinkedIn Profile
                   </a>
