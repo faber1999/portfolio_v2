@@ -4,6 +4,7 @@ import FlipWords from '@/components/inspira-ui/FlipWords.vue'
 import SkillsResume from './components/SkillsResume.vue'
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
+import { getYearsOfExperience } from '@/lib/utils'
 
 const { locale } = useI18n()
 
@@ -27,6 +28,8 @@ const cvLink = computed(() => {
 
   return `${baseUrl}${fileId}`
 })
+
+const yearsOfExperience = getYearsOfExperience()
 </script>
 
 <template>
@@ -62,7 +65,7 @@ const cvLink = computed(() => {
           </div>
 
           <div class="flex flex-col 2xl:text-2xl gap-6">
-            <span> {{ $t('profile.description-1') }} </span>
+            <span> {{ $t('profile.description-1', { years: yearsOfExperience }) }} </span>
 
             <span> {{ $t('profile.description-2') }} </span>
 
