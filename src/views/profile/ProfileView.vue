@@ -172,7 +172,7 @@ const yearsOfExperience = getYearsOfExperience()
                 <span class="text-lg font-semibold dark:text-white">
                   {{ $t('profile.english') }}
                 </span>
-                <span class="text-sm dark:text-white">B1+</span>
+                <span class="text-sm dark:text-white">B2</span>
               </div>
             </div>
           </div>
