@@ -12,7 +12,8 @@ const experience = [
         year: 2022,
       },
       {
-        isCurrent: true,
+        month: 'months.november',
+        year: 2025,
       },
     ],
     descriptions: ['experience.job-3-description-1', 'experience.job-3-description-2'],
