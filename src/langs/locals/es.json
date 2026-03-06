@@ -93,6 +93,12 @@
     "sub-title": "No pudimos encontrar esa página.",
     "back-profile": "Volver al perfil"
   },
+  "projects": {
+    "title": "Proyectos",
+    "view-demo": "Ver Demo",
+    "view-github": "Ver en GitHub",
+    "axonjs-description": "Un framework frontend JavaScript ligero que construí con fines educativos, inspirado en sistemas reactivos como Vue.js."
+  },
   "skills": {
     "leadership": "Liderazgo",
     "communication": "Comunicación",

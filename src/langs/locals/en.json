@@ -93,6 +93,12 @@
     "sub-title": "We couldn't find that page.",
     "back-profile": "Back to profile"
   },
+  "projects": {
+    "title": "Projects",
+    "view-demo": "View Demo",
+    "view-github": "View on GitHub",
+    "axonjs-description": "A lightweight frontend JavaScript framework I built for educational purposes, inspired by reactive systems like Vue.js."
+  },
   "skills": {
     "leadership": "Leadership",
     "communication": "Communication",

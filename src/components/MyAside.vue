@@ -27,7 +27,7 @@ import DynamicIcon from './DynamicIcon.vue'
           class="flex justify-center w-14 lg:w-full items-center aspect-square rounded-full transition-all duration-500"
           :class="{
             'hover:bg-gray-300/40 dark:hover:bg-black/20': !isActive,
-            'bg-gray-500/10 dark:bg-black/35 shadow-black/20 dark:shadow-black/45 shadow-md':
+            'bg-secondary/15 dark:bg-black/35 shadow-secondary/20 dark:shadow-black/45 shadow-md':
               isActive,
           }"
         >
