@@ -1,6 +1,5 @@
 <template>
   <svg
-    :class="$props.class"
     fill="currentColor"
     viewBox="0 0 512 512"
     enable-background="new 0 0 512 512"

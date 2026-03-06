@@ -1,11 +1,5 @@
 <template>
-  <svg
-    :class="$props.class"
-    id="Layer_1"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 472 472"
-    xml:space="preserve"
-  >
+  <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 472 472" xml:space="preserve">
     <g>
       <path
         style="fill: #c39215"

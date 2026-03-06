@@ -3,6 +3,22 @@ import SkillProgressItem, { type Skill } from './SkillProgressItem.vue'
 
 const skills: Skill[] = [
   {
+    name: 'React.js',
+    level: 'expert',
+  },
+  {
+    name: 'Next.js',
+    level: 'advanced',
+  },
+  {
+    name: 'Vue.js',
+    level: 'advanced',
+  },
+  {
+    name: 'Angular',
+    level: 'advanced',
+  },
+  {
     name: 'JavaScript',
     level: 'advanced',
   },
@@ -11,12 +27,8 @@ const skills: Skill[] = [
     level: 'advanced',
   },
   {
-    name: 'Vue.js',
-    level: 'advanced',
-  },
-  {
-    name: 'React.js',
-    level: 'expert',
+    name: 'Node.js',
+    level: 'intermediate',
   },
   {
     name: 'Nest.js',
@@ -32,10 +44,6 @@ const skills: Skill[] = [
   },
   {
     name: 'C#',
-    level: 'intermediate',
-  },
-  {
-    name: 'Node.js',
     level: 'intermediate',
   },
   {
