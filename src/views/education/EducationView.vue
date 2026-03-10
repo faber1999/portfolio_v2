@@ -36,6 +36,15 @@ const educationItems = {
     component: CourseOrCertificate,
     items: [
       {
+        title: 'Angular Pro: Lleva tus bases al siguiente nivel',
+        month: 'months.march',
+        year: 2026,
+        platformName: 'Udemy',
+        credentialId: 'UC-20d8cb67-4a6c-4d72-9a69-7cffabbe1860',
+        certificationUrl:
+          'https://www.udemy.com/certificate/UC-20d8cb67-4a6c-4d72-9a69-7cffabbe1860/',
+      },
+      {
         title: 'English EF SET Certificate - 51/100 - B2 Upper Intermediate',
         month: 'months.july',
         year: 2025,
@@ -59,7 +68,7 @@ const educationItems = {
         platformName: 'Udemy',
         credentialId: 'UC-4f24131e-0412-49fd-892f-18721982df70',
         certificationUrl:
-          'https://udemy-certificate.s3.amazonaws.com/image/UC-4f24131e-0412-49fd-892f-18721982df70.jpg?v=1715661647000',
+          'https://www.udemy.com/certificate/UC-4f24131e-0412-49fd-892f-18721982df70/',
       },
       {
         title: 'OpenAI: Ejercicios prácticos y asistentes con React + NestJS',
@@ -68,16 +77,25 @@ const educationItems = {
         platformName: 'Udemy',
         credentialId: 'UC-8313f32c-06d5-4c3c-9bb6-03fbef462141',
         certificationUrl:
-          'https://udemy-certificate.s3.amazonaws.com/image/UC-8313f32c-06d5-4c3c-9bb6-03fbef462141.jpg?v=1716453768000',
+          'https://www.udemy.com/certificate/UC-8313f32c-06d5-4c3c-9bb6-03fbef462141/',
       },
       {
-        title: 'Curso: Zustand - Gestor de estado para React',
+        title: 'Zustand - Gestor de estado para React',
         month: 'months.april',
         year: 2024,
         platformName: 'Udemy',
         credentialId: 'UC-b7ac48ed-ba23-47d0-bc9a-ad6f88af4177',
         certificationUrl:
-          'https://udemy-certificate.s3.amazonaws.com/image/UC-b7ac48ed-ba23-47d0-bc9a-ad6f88af4177.jpg?v=1713852930000',
+          'https://www.udemy.com/certificate/UC-b7ac48ed-ba23-47d0-bc9a-ad6f88af4177/',
+      },
+      {
+        title: 'Angular - De cero a experto',
+        month: 'months.december',
+        year: 2021,
+        platformName: 'Udemy',
+        credentialId: 'UC-71b05ea6-0fb5-486a-819a-8503b1a75326',
+        certificationUrl:
+          'https://www.udemy.com/certificate/UC-71b05ea6-0fb5-486a-819a-8503b1a75326/',
       },
       {
         title: 'DevOps Essentials Professional Certificate (DEPC) - (Spanish)',
