@@ -68,7 +68,11 @@
 
     "job-3-position": "Development Leader",
     "job-3-description-1": "As a development leader, I propose and develop comprehensive technological solutions, mentoring the team and developing robust components (such as a Drag and Drop survey generator, dynamic reporting, and hierarchy filters) that include internationalization systems.",
-    "job-3-description-2": "I implement Clean Code best practices through Code Reviews and Pair Programming, coordinating complete flows (Frontend, Backend, and DB) and participating in committees to evaluate and define new requirements, ensuring high quality standards."
+    "job-3-description-2": "I implement Clean Code best practices through Code Reviews and Pair Programming, coordinating complete flows (Frontend, Backend, and DB) and participating in committees to evaluate and define new requirements, ensuring high quality standards.",
+
+    "job-4-position": "Senior Frontend Developer (Contractor)",
+    "job-4-description-1": "Contributing to the development of a large-scale e-commerce platform for a major U.S. and Canada retailer.",
+    "job-4-description-2": "Stack: React.js · Next.js · TypeScript · Tailwind CSS · Zustand · GraphQL · ContentStack"
   },
   "months": {
     "january": "January",

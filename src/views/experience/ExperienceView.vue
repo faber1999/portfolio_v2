@@ -4,6 +4,20 @@ import IconComputerCode from '@/components/icons/IconComputerCode.vue'
 
 const experience = [
   {
+    position: 'experience.job-4-position',
+    company: 'Smith',
+    period: [
+      {
+        month: 'months.april',
+        year: 2026,
+      },
+      {
+        month: 'experience.current',
+      },
+    ],
+    descriptions: ['experience.job-4-description-1', 'experience.job-4-description-2'],
+  },
+  {
     position: 'experience.job-3-position',
     company: 'Celuweb.com S.A.S.',
     period: [
