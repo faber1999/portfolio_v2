@@ -29,27 +29,34 @@ const translate = useTranslate()
 
 <template>
   <div
-    class="rounded-xl border border-black/10 dark:border-white/10 bg-secondary p-4 flex flex-col gap-4 w-full shadow-sm hover:border-black/20 dark:hover:border-white/20 hover:shadow-md transition-all duration-200"
+    class="project-card rounded-2xl border border-black/10 dark:border-white/10 bg-secondary p-5 flex flex-col gap-4 w-full shadow-sm hover:border-black/20 dark:hover:border-white/20 hover:shadow-md transition-all duration-200"
   >
     <div class="flex flex-col gap-2">
       <div class="flex items-center justify-between gap-2">
         <h3 class="text-xl font-bold title">{{ name }}</h3>
         <span
           v-if="isPrivate"
-          class="shrink-0 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-amber-400/20 text-amber-500 dark:bg-amber-400/20 dark:text-amber-400 border border-amber-400/40"
+          class="shrink-0 text-xs font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-amber-400/20 text-amber-800 dark:bg-amber-400/20 dark:text-amber-400 border border-amber-400/40"
         >
-          Private
+          {{ $t('projects.private') }}
         </span>
       </div>
     </div>
 
-    <img
-      @click="$emit('select')"
+    <button
       v-if="previewGif"
-      :src="previewGif"
-      :alt="`${name} preview`"
-      class="rounded-lg h-auto max-h-48 w-fit object-cover block self-center shadow-sm cursor-pointer transition-transform duration-200 hover:scale-105 hover:shadow-md"
-    />
+      type="button"
+      class="project-preview"
+      :aria-label="`${$t('projects.view-details')}: ${name}`"
+      aria-haspopup="dialog"
+      @click="$emit('select')"
+    >
+      <img
+        :src="previewGif"
+        :alt="`${name} preview`"
+        class="w-full h-full object-contain transition-transform duration-200 hover:scale-[1.02]"
+      />
+    </button>
 
     <p class="text-sm text-gray-700 dark:text-white/70 leading-relaxed">
       {{ translate(description) }}
@@ -98,7 +105,7 @@ const translate = useTranslate()
               class="size-10 rounded-lg object-contain transition-transform duration-200 group-hover:-translate-y-1 group-hover:scale-110"
             />
             <span
-              class="text-[10px] text-gray-950 dark:text-white/80 transition-opacity duration-200 group-hover:opacity-100 opacity-60"
+              class="text-[10px] text-gray-950 dark:text-white/80 transition-opacity duration-200 group-hover:opacity-100 opacity-90"
             >
               {{ lang.name }}
             </span>

@@ -1,4 +1,9 @@
 {
+  "404": {
+    "title": "Houston, tenemos un problema.",
+    "sub-title": "No pudimos encontrar esa página.",
+    "back-profile": "Volver al perfil"
+  },
   "menu": {
     "profile": "Perfil",
     "projects": "Proyectos",
@@ -58,19 +63,15 @@
     "work-experience": "Experiencia Laboral",
     "position": "Cargo",
     "current": "Actual",
-
     "job-1-position": "Desarrollador de aplicaciones web",
     "job-1-description-1": "Desarrollé aplicaciones web empresariales B2B para marcas como Postobón, Nutresa, Ramo y Alquería. Lideré la modernización de interfaces, migrando aplicaciones de .NET WebForms a Vue.js y React.js.",
     "job-1-description-2": "Gestioné bases de datos SQL Server, procedimientos almacenados, optimización de consultas y procesos ETL para operaciones de negocio. Stack: JavaScript · React.js · Vue.js · .NET Framework · C# · VB · SQL Server · SQLite.",
-
     "job-2-position": "Consultor de Soluciones III",
     "job-2-description-1": "Desarrollé un sistema full stack de evaluación crediticia para Banco Popular, integrando APIs REST con el patrón repositorio y Entity Framework Core.",
     "job-2-description-2": "Implementé un HealthChecker para monitorizar de forma proactiva la disponibilidad y el rendimiento de los servicios. Stack: Angular · TypeScript · Tailwind CSS · .NET Core 5 · C# · SQL Server.",
-
     "job-3-position": "Líder de Desarrollo Frontend",
     "job-3-description-1": "Definí estándares de arquitectura frontend y lideré decisiones técnicas, evaluación de tecnologías, estrategias de migración y revisiones de código. Trabajé con React, Next.js y TypeScript, y migré la gestión de estado de Redux Toolkit a Zustand para reducir la complejidad.",
     "job-3-description-2": "Desarrollé un generador de encuestas Drag & Drop con lógica condicional y vista previa en tiempo real, y un sistema de reportería dinámica con ECharts para tablas, gráficos y mapas. Integré servicios .NET Core y optimicé APIs y consultas SQL Server. Stack: React.js · Next.js · TypeScript · Zustand · TanStack Query · Ant Design · Tailwind CSS · ECharts · .NET Core · C# · SQL Server.",
-
     "job-4-position": "Desarrollador Frontend Senior (Contratista)",
     "job-4-description-1": "Desarrollo el storefront de una plataforma B2B de comercio electrónico mayorista para EE. UU. y Canadá, en un monorepo con Next.js 15, React 19 y TypeScript, un BFF sobre Azure Functions y Contentstack CMS.",
     "job-4-description-2": "Entregué flujos de producto, carrito y checkout, incluyendo compras como invitado o usuario autenticado, restricciones de envío y manejo de errores al crear pedidos. Integré APIs de comercio con TanStack Query y Zustand.",
@@ -96,16 +97,14 @@
     "title": "En Construcción",
     "description": "Próximamente..."
   },
-  "404": {
-    "title": "Houston, tenemos un problema.",
-    "sub-title": "No pudimos encontrar esa página.",
-    "back-profile": "Volver al perfil"
-  },
   "projects": {
     "title": "Proyectos",
     "view-demo": "Ver Demo",
     "view-github": "Ver en GitHub",
-    "axonjs-description": "Un framework frontend JavaScript ligero que construí con fines educativos, inspirado en sistemas reactivos como Vue.js."
+    "axonjs-description": "Un framework frontend JavaScript ligero que construí con fines educativos, inspirado en sistemas reactivos como Vue.js.",
+    "view-details": "Ver detalles",
+    "private": "Privado",
+    "close": "Cerrar proyecto"
   },
   "skills": {
     "leadership": "Liderazgo",

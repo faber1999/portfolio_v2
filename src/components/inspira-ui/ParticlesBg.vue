@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { useDevicePixelRatio, useMouse } from '@vueuse/core'
+import { useDevicePixelRatio, useMouse, usePreferredReducedMotion } from '@vueuse/core'
 import { computed, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
 
 type Circle = {
@@ -37,6 +37,8 @@ const props = withDefaults(defineProps<Props>(), {
   class: '',
 })
 
+const reducedMotion = usePreferredReducedMotion()
+let animationFrame = 0
 const canvasRef = ref<HTMLCanvasElement | null>(null)
 const canvasContainerRef = ref<HTMLDivElement | null>(null)
 const context = ref<CanvasRenderingContext2D | null>(null)
@@ -74,12 +76,19 @@ onMounted(() => {
   }
 
   initCanvas()
-  animate()
+  if (reducedMotion.value !== 'reduce') animate()
   window.addEventListener('resize', initCanvas)
 })
 
 onBeforeUnmount(() => {
   window.removeEventListener('resize', initCanvas)
+  cancelAnimationFrame(animationFrame)
+})
+
+watch(reducedMotion, (value) => {
+  cancelAnimationFrame(animationFrame)
+  if (value !== 'reduce') animate()
+  else initCanvas()
 })
 
 watch([mouseX, mouseY], () => {
@@ -243,6 +252,6 @@ function animate() {
       )
     }
   })
-  window.requestAnimationFrame(animate)
+  animationFrame = window.requestAnimationFrame(animate)
 }
 </script>

@@ -127,18 +127,20 @@ const selectedProject = ref<Project | null>(null)
 </script>
 
 <template>
-  <div class="flex flex-col flex-1 h-fit min-h-full gap-4 xl:flex-row max-h-full">
-    <div class="flex flex-col gap-6 bg-tertiary p-4 rounded-lg w-full">
-      <div
+  <div class="view-stack flex flex-col flex-1 min-h-full gap-6 xl:flex-row">
+    <div
+      class="surface-panel flex flex-col gap-6 bg-tertiary p-5 md:p-8 rounded-2xl w-full min-w-0"
+    >
+      <h1
         class="flex flex-col items-center gap-2 text-primary self-center text-xl md:flex-row md:text-2xl lg:text-3xl"
       >
         <IconProjects class="size-8" />
         {{ $t('projects.title') }}
-      </div>
+      </h1>
 
       <hr class="border-black/20 w-10/12 self-center dark:border-white/15" />
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 p-2 overflow-y-active">
+      <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6 items-start">
         <ProjectCard
           v-for="project in projects"
           :key="project.name"

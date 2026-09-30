@@ -33,30 +33,30 @@ const yearsOfExperience = getYearsOfExperience()
 </script>
 
 <template>
-  <div class="flex flex-col flex-1 h-full min-h-full gap-4">
-    <div class="bg-tertiary rounded-lg xl:h-auto">
-      <div class="flex justify-center p-4 md:p-12 dark:text-white">
+  <div class="flex flex-col flex-1 min-h-full gap-6">
+    <div class="surface-panel bg-tertiary rounded-2xl">
+      <div class="flex justify-center p-5 md:p-8 lg:p-10 dark:text-white">
         <div class="flex flex-col gap-8">
           <div class="flex flex-col md:flex-row self-center md:self-start items-center gap-6">
             <img
               src="/images/profile.avif"
-              alt="Profile"
-              class="rounded-full size-44 brightness-125 saturate-[1.20] 2xl:size-60 shadow-2xl dark:shadow-sm"
+              alt="Faber Grajales"
+              class="rounded-full size-36 md:size-44 shrink-0 brightness-125 saturate-[1.20] shadow-xl ring-4 ring-white/50 dark:ring-white/10"
             />
 
             <div
               class="flex flex-col text-center font-semibold gap-2 md:gap-4 text-xl md:text-start 2xl:text-2xl"
             >
-              <span>
+              <h1 class="text-3xl md:text-4xl font-bold tracking-tight">
                 {{ $t('profile.title') }}
-              </span>
+              </h1>
 
               <span> {{ $t('profile.role') }} </span>
 
               <a
                 download
                 :href="cvLink"
-                class="relative font-bold title w-fit cursor-pointer self-center md:self-start"
+                class="cv-link font-bold w-fit self-center md:self-start mt-2"
               >
                 {{ $t('profile.download-cv') }}
                 <span class="absolute bottom-0 left-0 h-[2px] title-decorator" aria-hidden="true" />
@@ -64,7 +64,7 @@ const yearsOfExperience = getYearsOfExperience()
             </div>
           </div>
 
-          <div class="flex flex-col 2xl:text-2xl gap-6">
+          <div class="flex flex-col text-base lg:text-lg leading-relaxed gap-4">
             <span> {{ $t('profile.description-1', { years: yearsOfExperience }) }} </span>
 
             <span> {{ $t('profile.description-2') }} </span>
@@ -100,7 +100,9 @@ const yearsOfExperience = getYearsOfExperience()
               <ul class="flex flex-col gap-2">
                 <li>
                   <span class="font-semibold">{{ $t('profile.email') }}: </span>
-                  <span class="font-normal"> fabergrajales1999@gmail.com </span>
+                  <a class="font-normal break-all" href="mailto:fabergrajales1999@gmail.com">
+                    fabergrajales1999@gmail.com
+                  </a>
                 </li>
                 <li>
                   <span class="font-semibold">Whatsapp: </span>
@@ -108,6 +110,7 @@ const yearsOfExperience = getYearsOfExperience()
                     class="font-normal underline underline-offset-[5px]"
                     aria-label="Chat on WhatsApp"
                     target="_blank"
+                    rel="noopener noreferrer"
                     :href="`https://wa.me/573146310397?text=${whatsappTranslatedMsg}`"
                   >
                     (+57) 314 631 0397
@@ -120,6 +123,7 @@ const yearsOfExperience = getYearsOfExperience()
                     class="font-normal underline underline-offset-[5px]"
                     aria-label="LinkedIn Profile"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://www.linkedin.com/in/faber1999/"
                   >
                     LinkedIn Profile
@@ -184,26 +188,22 @@ const yearsOfExperience = getYearsOfExperience()
               {{ $t('profile.availability') }}
             </h2>
 
-            <ul class="grid gap-2 grid-cols-2">
-              <li class="text-nowrap overflow-x-hidden truncate">
+            <ul class="grid gap-3 grid-cols-1 sm:grid-cols-2">
+              <li class="leading-relaxed">
                 {{ $t('profile.status') }}:
-                <span class="title font-semibold truncate">{{ $t('profile.status-value') }}!</span>
+                <span class="title font-semibold">{{ $t('profile.status-value') }}!</span>
               </li>
-              <li class="text-nowrap overflow-x-hidden truncate">
+              <li class="leading-relaxed">
                 {{ $t('profile.work-type') }}:
                 <span class="title font-semibold">{{ $t('profile.work-type-value') }}</span>
               </li>
-              <li class="text-nowrap overflow-x-hidden truncate">
+              <li class="leading-relaxed">
                 {{ $t('profile.remote-work') }}:
-                <span class="title font-semibold truncate">{{
-                  $t('profile.remote-work-value')
-                }}</span>
+                <span class="title font-semibold">{{ $t('profile.remote-work-value') }}</span>
               </li>
-              <li class="text-nowrap overflow-x-hidden truncate">
+              <li class="leading-relaxed">
                 {{ $t('profile.relocation') }}:
-                <span class="title font-semibold truncate">{{
-                  $t('profile.relocation-value')
-                }}</span>
+                <span class="title font-semibold">{{ $t('profile.relocation-value') }}</span>
               </li>
             </ul>
           </div>
@@ -211,7 +211,9 @@ const yearsOfExperience = getYearsOfExperience()
       </div>
     </div>
 
-    <div class="flex flex-col bg-tertiary rounded-lg p-4 gap-6 md:p-12 2xl:text-xl dark:text-white">
+    <div
+      class="surface-panel flex flex-col bg-tertiary rounded-2xl p-5 gap-6 md:p-8 lg:p-10 2xl:text-xl dark:text-white"
+    >
       <h2 class="title text-xl 2xl:text-2xl font-semibold">
         {{ $t('profile.technical-skills') }}
       </h2>

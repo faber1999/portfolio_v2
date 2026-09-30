@@ -184,3 +184,80 @@ body * {
     background-color 0.5s ease-in-out,
     border-color 0.5s ease-in-out;
 }
+
+/* Shared refinements preserve the original palettes and translucent surfaces. */
+@layer components {
+  .surface-panel {
+    border: 1px solid rgb(255 255 255 / 45%);
+    box-shadow: 0 8px 32px rgb(0 0 0 / 3%);
+  }
+  .dark .surface-panel {
+    border-color: rgb(255 255 255 / 9%);
+  }
+  .header-control {
+    @apply flex size-11 items-center justify-center rounded-full border border-black/10 bg-secondary hover:bg-white/80 dark:border-white/15 dark:hover:bg-white/15;
+  }
+  .cv-link {
+    @apply rounded-full border border-secondary px-5 py-2.5 text-base text-secondary;
+  }
+  .project-preview {
+    @apply block w-full aspect-video overflow-hidden rounded-xl border border-black/5 bg-white/60 dark:bg-black/20 dark:border-white/10;
+  }
+  .project-dialog {
+    padding: 1rem;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    width: min(100%, 52rem);
+    max-width: 100%;
+    max-height: 100dvh;
+    overflow: visible;
+  }
+  .project-dialog::backdrop {
+    background: rgb(0 0 0 / 65%);
+    backdrop-filter: blur(6px);
+  }
+  .portfolio-nav {
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+  }
+
+  .timeline-item {
+    overflow-wrap: anywhere;
+  }
+}
+
+:where(a, button, [tabindex]):focus-visible {
+  outline: 3px solid hsl(var(--secondary));
+  outline-offset: 4px;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+#content {
+  overscroll-behavior-y: contain;
+  scrollbar-gutter: stable;
+}
+html {
+  font-synthesis: none;
+}
+body {
+  line-height: 1.6;
+}
+body * {
+  scrollbar-gutter: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.cv-link:hover {
+  background: hsl(var(--secondary) / 0.1);
+}

@@ -21,11 +21,11 @@ const { isMobile } = useDeviceType()
 <template>
   <li>
     <div
-      class="relative ml-12 pb-2 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:gap-10 md:space-x-4]"
+      class="timeline-item relative ml-8 md:ml-10 pb-2 grid before:absolute before:left-[-23px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:gap-6"
     >
       <div class="relative pb-8">
         <div>
-          <span class="text-secondary -left-[42px] -top-[10px] absolute rounded-full text-5xl">
+          <span class="text-secondary -left-[30px] -top-[10px] absolute rounded-full text-5xl">
             •
           </span>
 
@@ -34,7 +34,7 @@ const { isMobile } = useDeviceType()
               {{ title }}
             </h3>
 
-            <time class="p-0 m-0 text-sm text-gray-800 dark:text-white/80"
+            <time class="p-0 m-0 text-sm break-words text-gray-700 dark:text-white/80"
               >{{ `${platformName} (${$t(month)} - ${year})` }}
             </time>
 

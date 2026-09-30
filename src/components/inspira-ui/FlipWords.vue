@@ -37,6 +37,7 @@
 
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { usePreferredReducedMotion } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
@@ -54,6 +55,8 @@ const props = withDefaults(defineProps<Props>(), {
 
 defineEmits(['animationStart', 'animationComplete'])
 
+const reducedMotion = usePreferredReducedMotion()
+let swapTimeout: number | undefined
 const currentWord = ref(props.words[0])
 const isVisible = ref(true)
 const timeoutId = ref<number | null>(null)
@@ -61,7 +64,7 @@ const timeoutId = ref<number | null>(null)
 function startAnimation() {
   isVisible.value = false
 
-  setTimeout(() => {
+  swapTimeout = window.setTimeout(() => {
     const currentIndex = props.words.indexOf(currentWord.value)
     const nextWord = props.words[currentIndex + 1] || props.words[0]
     currentWord.value = nextWord
@@ -82,6 +85,7 @@ const splitWords = computed(() => {
 })
 
 function startTimeout() {
+  if (reducedMotion.value === 'reduce') return
   timeoutId.value = window.setTimeout(() => {
     startAnimation()
   }, props.duration)
@@ -92,9 +96,17 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
+  clearTimeout(swapTimeout)
   if (timeoutId.value) {
     clearTimeout(timeoutId.value)
   }
+})
+
+watch(reducedMotion, () => {
+  if (timeoutId.value) clearTimeout(timeoutId.value)
+  clearTimeout(swapTimeout)
+  isVisible.value = true
+  startTimeout()
 })
 
 watch(isVisible, (newValue) => {

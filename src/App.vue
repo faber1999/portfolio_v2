@@ -1,15 +1,7 @@
 <script setup lang="ts">
-import { useColorMode } from '@vueuse/core'
-import { onMounted } from 'vue'
 import { RouterView } from 'vue-router'
 import MainLayout from './layouts/MainLayout.vue'
 import router from './router'
-
-const mode = useColorMode()
-
-onMounted(() => {
-  mode.value = 'auto'
-})
 
 router.beforeEach(() => {
   setTimeout(() => {

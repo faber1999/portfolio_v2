@@ -119,23 +119,23 @@ const educationItems = {
 </script>
 
 <template>
-  <div class="flex flex-col flex-1 h-fit min-h-full gap-4 xl:flex-row max-h-full">
+  <div class="view-stack flex flex-col flex-1 min-h-full gap-6 xl:flex-row">
     <div
-      class="flex flex-col gap-6 bg-tertiary p-4 rounded-lg w-full"
+      class="surface-panel flex flex-col gap-6 bg-tertiary p-5 md:p-8 rounded-2xl w-full min-w-0"
       v-for="(educationItem, index) in educationItems"
       :key="index"
     >
-      <div
+      <h1
         class="flex flex-col items-center gap-2 text-primary self-center text-xl md:flex-row md:text-2xl lg:text-3xl"
       >
         <component :is="educationItem.icon" class="size-10" />
 
         {{ $t(educationItem.title) }}
-      </div>
+      </h1>
 
       <hr class="border-black/20 w-10/12 self-center dark:border-white/15" />
 
-      <ol class="relative overflow-y-active">
+      <ol class="relative">
         <component
           v-for="item in educationItem.items"
           :key="item.title"
