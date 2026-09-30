@@ -51,7 +51,7 @@ const yearsOfExperience = getYearsOfExperience()
                 {{ $t('profile.title') }}
               </span>
 
-              <span> Full Stack Developer </span>
+              <span> {{ $t('profile.role') }} </span>
 
               <a
                 download

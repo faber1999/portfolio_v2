@@ -15,7 +15,13 @@ const experience = [
         month: 'experience.current',
       },
     ],
-    descriptions: ['experience.job-4-description-1', 'experience.job-4-description-2'],
+    descriptions: [
+      'experience.job-4-description-1',
+      'experience.job-4-description-2',
+      'experience.job-4-description-3',
+      'experience.job-4-description-4',
+      'experience.job-4-description-5',
+    ],
   },
   {
     position: 'experience.job-3-position',

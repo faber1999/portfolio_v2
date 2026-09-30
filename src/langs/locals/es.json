@@ -11,13 +11,14 @@
     "portfolio": "Portafolio de faber"
   },
   "profile": {
+    "role": "Líder de Desarrollo Frontend · Ingeniero Frontend Senior",
     "availability": "Disponibilidad",
     "city": "Ciudad",
     "contact-info": "Información de contacto",
     "country": "País",
     "current-location": "Ubicado en: Armenia, Quindío, Colombia",
-    "description-1": "Soy Ingeniero de Sistemas con +{years} años de experiencia en desarrollo de software, especializado en desarrollo de aplicaciones web.",
-    "description-2": "Apasionado por las tecnologías frontend como React, Angular y Vue, busco constantemente optimizar la experiencia del usuario y entregar soluciones escalables. Mi objetivo es liderar proyectos innovadores que impacten positivamente la vida de las personas.",
+    "description-1": "Soy Ingeniero de Sistemas con +{years} años de experiencia construyendo aplicaciones web escalables para clientes empresariales B2B. Me especializo en desarrollo frontend, arquitectura y liderazgo técnico.",
+    "description-2": "Actualmente desarrollo una plataforma de comercio electrónico mayorista para EE. UU. y Canadá con Next.js, React y TypeScript. He liderado estándares de arquitectura y modernización frontend, conectando interfaces con APIs y servicios en Node.js y .NET. Trabajo con diseño en Figma y flujos asistidos por IA para llevar soluciones de la idea a producción.",
     "download-cv": "Descargar CV",
     "email": "Correo electrónico",
     "english": "Inglés",
@@ -59,20 +60,23 @@
     "current": "Actual",
 
     "job-1-position": "Desarrollador de aplicaciones web",
-    "job-1-description-1": "Desarrollé e implementé aplicaciones web para clientes reconocidos, integrando APIs REST y gestionando bases de datos para optimizar procesos.",
-    "job-1-description-2": "Responsable del mantenimiento, soporte y diseño de servicios web con ETLs, asegurando una integración eficaz y soluciones escalables.",
+    "job-1-description-1": "Desarrollé aplicaciones web empresariales B2B para marcas como Postobón, Nutresa, Ramo y Alquería. Lideré la modernización de interfaces, migrando aplicaciones de .NET WebForms a Vue.js y React.js.",
+    "job-1-description-2": "Gestioné bases de datos SQL Server, procedimientos almacenados, optimización de consultas y procesos ETL para operaciones de negocio. Stack: JavaScript · React.js · Vue.js · .NET Framework · C# · VB · SQL Server · SQLite.",
 
     "job-2-position": "Consultor de Soluciones III",
-    "job-2-description-1": "Lideré la evaluación de viabilidad de clientes para la adquisición de nuevos servicios en un proyecto del Banco Popular, analizando comportamientos crediticios y registros en centrales de riesgos.",
-    "job-2-description-2": "Implementé optimizaciones en el sistema y desarrollé un HealthChecker para monitorizar el estado y la disponibilidad de los servicios.",
+    "job-2-description-1": "Desarrollé un sistema full stack de evaluación crediticia para Banco Popular, integrando APIs REST con el patrón repositorio y Entity Framework Core.",
+    "job-2-description-2": "Implementé un HealthChecker para monitorizar de forma proactiva la disponibilidad y el rendimiento de los servicios. Stack: Angular · TypeScript · Tailwind CSS · .NET Core 5 · C# · SQL Server.",
 
-    "job-3-position": "Líder de desarrollo",
-    "job-3-description-1": "Como líder de desarrollo, propongo y elaboro soluciones tecnológicas integrales, mentorando al equipo y desarrollando componentes robustos (como un generador de encuestas Drag and Drop, reportería dinámica y filtros de jerarquías) que incluyen sistemas de internacionalización.",
-    "job-3-description-2": "Implemento buenas prácticas de Clean Code a través de Code Reviews y Pair Programming, coordinando flujos completos (Frontend, Backend y DB) y participando en comités para evaluar y definir nuevos requerimientos, garantizando altos estándares de calidad.",
+    "job-3-position": "Líder de Desarrollo Frontend",
+    "job-3-description-1": "Definí estándares de arquitectura frontend y lideré decisiones técnicas, evaluación de tecnologías, estrategias de migración y revisiones de código. Trabajé con React, Next.js y TypeScript, y migré la gestión de estado de Redux Toolkit a Zustand para reducir la complejidad.",
+    "job-3-description-2": "Desarrollé un generador de encuestas Drag & Drop con lógica condicional y vista previa en tiempo real, y un sistema de reportería dinámica con ECharts para tablas, gráficos y mapas. Integré servicios .NET Core y optimicé APIs y consultas SQL Server. Stack: React.js · Next.js · TypeScript · Zustand · TanStack Query · Ant Design · Tailwind CSS · ECharts · .NET Core · C# · SQL Server.",
 
     "job-4-position": "Desarrollador Frontend Senior (Contratista)",
-    "job-4-description-1": "Contribuyendo al desarrollo de una plataforma de comercio electrónico a gran escala para un importante minorista de EE. UU. y Canadá.",
-    "job-4-description-2": "Stack: React.js · Next.js · TypeScript · Tailwind CSS · Zustand · GraphQL · ContentStack"
+    "job-4-description-1": "Desarrollo el storefront de una plataforma B2B de comercio electrónico mayorista para EE. UU. y Canadá, en un monorepo con Next.js 15, React 19 y TypeScript, un BFF sobre Azure Functions y Contentstack CMS.",
+    "job-4-description-2": "Entregué flujos de producto, carrito y checkout, incluyendo compras como invitado o usuario autenticado, restricciones de envío y manejo de errores al crear pedidos. Integré APIs de comercio con TanStack Query y Zustand.",
+    "job-4-description-3": "Implementé funcionalidades de cuenta, listas guardadas con búsqueda, ordenamiento y totales, y vistas de detalle de pedidos, alineando los contratos frontend con las APIs.",
+    "job-4-description-4": "Llevé diseños de Figma a interfaces de producción con tokens de diseño y Tailwind CSS para escritorio y móvil. Creé flujos asistidos por IA a partir de Jira y Figma para generar componentes tipados, mocks y stories de forma consistente.",
+    "job-4-description-5": "Stack: React 19 · Next.js 15 · TypeScript · Tailwind CSS · Zustand · TanStack Query · GraphQL · Contentstack · Azure Functions · Figma · Jira · Cursor · Claude Code · Datadog."
   },
   "months": {
     "january": "Enero",
