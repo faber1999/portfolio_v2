@@ -3,7 +3,8 @@ import { useTranslate, type Translations } from '@/composables/useTranslate'
 
 export interface Lang {
   name: string
-  icon: string
+  icon?: string
+  abbreviation?: string
 }
 
 export interface Detail {
@@ -100,10 +101,18 @@ const translate = useTranslate()
             class="flex flex-col items-center gap-1 group cursor-default"
           >
             <img
+              v-if="lang.icon"
               :src="lang.icon"
               :alt="lang.name"
               class="size-10 rounded-lg object-contain transition-transform duration-200 group-hover:-translate-y-1 group-hover:scale-110"
             />
+            <span
+              v-else
+              aria-hidden="true"
+              class="size-10 rounded-lg flex items-center justify-center border border-black/15 dark:border-white/20 bg-black/5 dark:bg-white/5 text-primary text-sm font-bold transition-transform duration-200 group-hover:-translate-y-1 group-hover:scale-110"
+            >
+              {{ lang.abbreviation ?? lang.name.slice(0, 2) }}
+            </span>
             <span
               class="text-[10px] text-gray-950 dark:text-white/80 transition-opacity duration-200 group-hover:opacity-100 opacity-90"
             >
