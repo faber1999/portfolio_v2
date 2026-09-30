@@ -18,6 +18,39 @@ type Project = {
 
 const projects: Project[] = [
   {
+    name: 'F.W. Webb',
+    description: {
+      en: 'B2B wholesale e-commerce platform in development at Smith. My frontend work covers product, cart, checkout, account, saved-list, and order-detail experiences.',
+      es: 'Plataforma de comercio electrónico mayorista B2B en desarrollo en Smith. Mi trabajo frontend abarca las experiencias de producto, carrito, checkout, cuentas, listas guardadas y detalle de pedidos.',
+    },
+    demoUrl: 'https://ecomm-application-mobile-one.vercel.app/',
+    previewGif: '/images/projects/fw-webb/home.png',
+    techs: {
+      frontend: [
+        { name: 'React.js', icon: '/icons/react.svg' },
+        { name: 'TypeScript', icon: '/icons/typescript.svg' },
+        { name: 'Tailwind', icon: '/icons/tailwindcss.svg' },
+        { name: 'Zustand', icon: '/icons/zustand.svg' },
+      ],
+    },
+    detail: [
+      {
+        img: '/images/projects/fw-webb/home.png',
+        description: {
+          en: 'F.W. Webb is the B2B wholesale e-commerce project I am currently working on at Smith. The platform is in development; the linked demo is a preview of the work in progress.\n\nMy contribution focuses on frontend development with Next.js 15, React 19, and TypeScript, translating Figma designs into responsive interfaces and integrating commerce APIs with TanStack Query and Zustand.',
+          es: 'F.W. Webb es el proyecto de comercio electrónico mayorista B2B en el que trabajo actualmente en Smith. La plataforma está en desarrollo; la demo enlazada permite explorar una versión del trabajo en curso.\n\nMi contribución se centra en el desarrollo frontend con Next.js 15, React 19 y TypeScript, llevando diseños de Figma a interfaces adaptables e integrando APIs de comercio con TanStack Query y Zustand.',
+        },
+      },
+      {
+        img: '/images/projects/fw-webb/home-mobile.png',
+        description: {
+          en: 'My work includes product, cart, and checkout flows for guest and authenticated purchases, shipping restrictions, and place-order error handling. I also contribute to account features, saved lists with search and sorting, and order-detail views.\n\nThese contributions are part of the ongoing project and do not imply that every feature is available in the public demo. The wider platform integrates Contentstack CMS and a BFF over Azure Functions.',
+          es: 'Mi trabajo incluye flujos de producto, carrito y checkout para compras de invitados y usuarios autenticados, restricciones de envío y manejo de errores al realizar pedidos. También contribuyo a las funciones de cuenta, listas guardadas con búsqueda y ordenamiento, y vistas de detalle de pedidos.\n\nEstas contribuciones forman parte del proyecto en curso y no implican que todas las funciones estén disponibles en la demo pública. La plataforma integra Contentstack CMS y un BFF sobre Azure Functions.',
+        },
+      },
+    ],
+  },
+  {
     name: 'DSD',
     description: {
       en: 'Dynamic application for commercial figures such as, self-sale, pre-sale, marketing, deliveries, marketing with modules and adaptable reports for each business.',

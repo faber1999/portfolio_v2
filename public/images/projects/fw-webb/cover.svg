@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#202429"/>
+      <stop offset="1" stop-color="#111315"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="24" fill="url(#background)"/>
+  <rect x="56" y="56" width="848" height="428" rx="20" fill="none" stroke="#ffffff" stroke-opacity=".12"/>
+  <path d="M96 152h72" stroke="#fbbf24" stroke-width="6" stroke-linecap="round"/>
+  <text x="96" y="250" fill="#fafafa" font-family="Arial, sans-serif" font-size="72" font-weight="700">F.W. Webb</text>
+  <text x="98" y="310" fill="#d4d4d8" font-family="Arial, sans-serif" font-size="28">B2B E-commerce · Smith</text>
+  <rect x="96" y="372" width="136" height="48" rx="24" fill="#fbbf24" fill-opacity=".12" stroke="#fbbf24" stroke-opacity=".4"/>
+  <text x="164" y="403" text-anchor="middle" fill="#fbbf24" font-family="Arial, sans-serif" font-size="20" font-weight="700">DEMO</text>
+</svg>
