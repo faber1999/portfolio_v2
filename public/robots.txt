@@ -2,8 +2,7 @@ User-agent: *
 Allow: /
 
 # Disallowed Sub-Directories
+# Note: /images must stay crawlable so link previews (og:image) work.
 Disallow: /flags
-Disallow: /images
 
-# Optionally point to your sitemap
 Sitemap: https://fabergrajales.dev/sitemap.xml
