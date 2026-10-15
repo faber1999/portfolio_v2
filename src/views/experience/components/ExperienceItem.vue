@@ -28,7 +28,7 @@ const techIcons: Record<string, string> = {
   TypeScript: '/icons/typescript.svg',
   JavaScript: '/icons/javascript.svg',
   'Tailwind CSS': '/icons/tailwindcss.svg',
-  Zustand: '/icons/zustand.svg',
+  Zustand: '/icons/zustand.webp',
   'TanStack Query': '/icons/tanstack.svg',
   'Ant Design': '/icons/antd.svg',
   Contentstack: '/icons/contentstack.svg',

@@ -40,7 +40,7 @@ const projects: Project[] = [
         { name: 'React.js', icon: '/icons/react.svg' },
         { name: 'TypeScript', icon: '/icons/typescript.svg' },
         { name: 'Tailwind', icon: '/icons/tailwindcss.svg' },
-        { name: 'Zustand', icon: '/icons/zustand.svg' },
+        { name: 'Zustand', icon: '/icons/zustand.webp' },
         { name: 'TanStack Query', icon: '/icons/tanstack.svg' },
       ],
       backend: [{ name: 'Azure Functions', icon: '/icons/azure-function.svg' }],
@@ -79,7 +79,7 @@ const projects: Project[] = [
     techs: {
       frontend: [
         { name: 'React.js', icon: '/icons/react.svg' },
-        { name: 'Zustand', icon: '/icons/zustand.svg' },
+        { name: 'Zustand', icon: '/icons/zustand.webp' },
         { name: 'Ant Design', icon: '/icons/antd.svg' },
         { name: 'Tailwind', icon: '/icons/tailwindcss.svg' },
         { name: 'Vite', icon: '/icons/vite.svg' },
