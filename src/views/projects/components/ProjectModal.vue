@@ -3,6 +3,7 @@ import { ref, watch, nextTick, onBeforeUnmount } from 'vue'
 import { useTranslate } from '@/composables/useTranslate'
 import type { Lang, Detail } from './ProjectCard.vue'
 import type { Translations } from '@/composables/useTranslate'
+import TechStack from './TechStack.vue'
 
 const props = defineProps<{
   open: boolean
@@ -115,41 +116,7 @@ const translate = useTranslate()
         </template>
 
         <!-- Tech stack -->
-        <template v-if="techs && Object.keys(techs).length">
-          <div v-for="(langs, category) in techs" :key="category" class="flex flex-col gap-2">
-            <span
-              class="text-[10px] uppercase tracking-widest text-gray-600 dark:text-white/70 font-semibold"
-            >
-              {{ category }}
-            </span>
-            <div class="flex gap-3 flex-wrap items-end">
-              <div
-                v-for="lang in langs"
-                :key="lang.name"
-                class="flex flex-col items-center gap-1 group cursor-default"
-              >
-                <img
-                  v-if="lang.icon"
-                  :src="lang.icon"
-                  :alt="lang.name"
-                  class="size-10 rounded-lg object-contain transition-transform duration-200 group-hover:-translate-y-1 group-hover:scale-110"
-                />
-                <span
-                  v-else
-                  aria-hidden="true"
-                  class="size-10 rounded-lg flex items-center justify-center border border-black/15 dark:border-white/20 bg-black/5 dark:bg-white/5 text-primary text-sm font-bold transition-transform duration-200 group-hover:-translate-y-1 group-hover:scale-110"
-                >
-                  {{ lang.abbreviation ?? lang.name.slice(0, 2) }}
-                </span>
-                <span
-                  class="text-[10px] text-gray-500 dark:text-white/70 transition-opacity duration-200 group-hover:opacity-100 opacity-90"
-                >
-                  {{ lang.name }}
-                </span>
-              </div>
-            </div>
-          </div>
-        </template>
+        <TechStack v-if="techs && Object.keys(techs).length" :techs="techs" />
       </div>
     </dialog>
   </Teleport>

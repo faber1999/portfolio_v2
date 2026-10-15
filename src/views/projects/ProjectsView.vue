@@ -27,16 +27,16 @@ const projects: Project[] = [
     previewGif: '/images/projects/fw-webb/home.png',
     techs: {
       frontend: [
-        { name: 'Next.js', abbreviation: 'N' },
+        { name: 'Next.js', icon: '/icons/nextjs.svg' },
         { name: 'React.js', icon: '/icons/react.svg' },
         { name: 'TypeScript', icon: '/icons/typescript.svg' },
         { name: 'Tailwind', icon: '/icons/tailwindcss.svg' },
         { name: 'Zustand', icon: '/icons/zustand.svg' },
-        { name: 'TanStack Query', abbreviation: 'TQ' },
+        { name: 'TanStack Query', icon: '/icons/tanstack.svg' },
       ],
-      CMS: [{ name: 'Contentstack', abbreviation: 'CS' }],
-      backend: [{ name: 'Azure Functions', abbreviation: 'AF' }],
-      observability: [{ name: 'Datadog', abbreviation: 'DD' }],
+      backend: [{ name: 'Azure Functions', icon: '/icons/azure-function.svg' }],
+      CMS: [{ name: 'Contentstack', icon: '/icons/contentstack.svg' }],
+      observability: [{ name: 'Datadog', icon: '/icons/datadog.svg' }],
     },
     detail: [
       {

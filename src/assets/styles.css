@@ -238,6 +238,61 @@ a {
   overscroll-behavior-y: contain;
   scrollbar-gutter: stable;
 }
+
+/* Scroll edge fades: registered so the fade size can transition in and out smoothly. */
+@property --fade-top {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 0px;
+}
+@property --fade-bottom {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 0px;
+}
+/* Fades live only in reserved empty space: the top one in the header's bottom padding
+   (pulled under via negative margin + equal padding), the bottom one over the pb-4 md:pb-6 padding. */
+.scroll-fade {
+  --fade-top-size: 1.25rem; /* = MyHeader py-5 */
+  --fade-bottom-size: 1rem; /* = pb-4 */
+  margin-top: calc(-1 * var(--fade-top-size));
+  padding-top: var(--fade-top-size);
+  --fade-mask: linear-gradient(
+    to bottom,
+    transparent,
+    #000 var(--fade-top),
+    #000 calc(100% - var(--fade-bottom)),
+    transparent
+  );
+  /* Second layer keeps the scrollbar strip fully opaque. */
+  -webkit-mask-image: var(--fade-mask), linear-gradient(#000, #000);
+  mask-image: var(--fade-mask), linear-gradient(#000, #000);
+  -webkit-mask-size:
+    calc(100% - var(--scrollbar-w, 0px)) 100%,
+    var(--scrollbar-w, 0px) 100%;
+  mask-size:
+    calc(100% - var(--scrollbar-w, 0px)) 100%,
+    var(--scrollbar-w, 0px) 100%;
+  -webkit-mask-position: left top, right top;
+  mask-position: left top, right top;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  transition:
+    --fade-top 0.25s ease-out,
+    --fade-bottom 0.25s ease-out;
+}
+.scroll-fade.fade-top {
+  --fade-top: var(--fade-top-size);
+}
+.scroll-fade.fade-bottom {
+  --fade-bottom: var(--fade-bottom-size);
+}
+@media (min-width: 768px) {
+  .scroll-fade {
+    --fade-top-size: 1.5rem; /* = MyHeader md:py-6 */
+    --fade-bottom-size: 1.5rem; /* = md:pb-6 */
+  }
+}
 html {
   font-synthesis: none;
 }
