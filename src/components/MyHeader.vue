@@ -31,7 +31,7 @@ const languages = [
     <RouterLink to="/" custom v-slot="{ href, navigate }">
       <a
         :href="href"
-        class="rounded-md text-lg leading-tight sm:text-xl md:text-2xl title font-bold tracking-tight"
+        class="rounded-md text-xl leading-tight sm:text-2xl md:text-3xl title font-bold tracking-tight"
         @click="navigate"
       >
         {{ $t('header.portfolio') }}
