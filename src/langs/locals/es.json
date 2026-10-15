@@ -1,8 +1,35 @@
 {
-  "404": {
+  "meta": {
+    "home-title": "Faber Grajales · Desarrollador Frontend Senior",
+    "title-suffix": "Faber Grajales",
+    "titles": {
+      "experience": "Experiencia",
+      "projects": "Proyectos",
+      "education": "Educación",
+      "not-found": "Página no encontrada"
+    },
+    "descriptions": {
+      "profile": "Desarrollador Frontend Senior con más de 8 años creando aplicaciones web rápidas y accesibles con Vue, React, Angular y TypeScript. Conoce mi experiencia y proyectos.",
+      "experience": "Experiencia profesional de Faber Grajales: liderazgo frontend, arquitectura y aplicaciones web empresariales B2B.",
+      "projects": "Proyectos seleccionados de Faber Grajales construidos con Vue, React, Next.js, TypeScript y .NET.",
+      "education": "Educación, cursos y certificaciones de Faber Grajales, Ingeniero de Sistemas y Desarrollador Frontend Senior.",
+      "not-found": "La página que buscas no existe."
+    }
+  },
+  "a11y": {
+    "skip-to-content": "Saltar al contenido",
+    "main-nav": "Navegación principal",
+    "home-link": "Faber Grajales, ir al perfil",
+    "language": "Idioma",
+    "dark-theme": "Tema oscuro"
+  },
+  "notFound": {
     "title": "Houston, tenemos un problema.",
-    "sub-title": "No pudimos encontrar esa página.",
-    "back-profile": "Volver al perfil"
+    "description": "La página que buscas no existe o fue movida.",
+    "requested-path": "Ruta solicitada",
+    "back-home": "Volver al inicio",
+    "contact-me": "Contáctame",
+    "quick-links": "O ve directo a una sección"
   },
   "menu": {
     "profile": "Perfil",
@@ -13,7 +40,7 @@
   "header": {
     "light-mode": "Modo Claro",
     "dark-mode": "Modo Oscuro",
-    "portfolio": "Portafolio de faber"
+    "portfolio": "Portafolio de Faber"
   },
   "profile": {
     "role": "Líder de Desarrollo Frontend · Ingeniero Frontend Senior",
@@ -22,9 +49,19 @@
     "contact-info": "Información de contacto",
     "country": "País",
     "current-location": "Ubicado en: Armenia, Quindío, Colombia",
-    "description-1": "Soy Ingeniero de Sistemas con +{years} años de experiencia construyendo aplicaciones web escalables para clientes empresariales B2B. Me especializo en desarrollo frontend, arquitectura y liderazgo técnico.",
-    "description-2": "Actualmente desarrollo una plataforma de comercio electrónico mayorista para EE. UU. y Canadá con Next.js, React y TypeScript. He liderado estándares de arquitectura y modernización frontend, conectando interfaces con APIs y servicios en Node.js y .NET. Trabajo con diseño en Figma y flujos asistidos por IA para llevar soluciones de la idea a producción.",
+    "description-1": "Soy Ingeniero de Sistemas con {years}+ años de experiencia construyendo aplicaciones web escalables para clientes empresariales B2B. Me especializo en desarrollo frontend, arquitectura y liderazgo técnico.",
+    "description-2": "Actualmente construyo una plataforma de comercio electrónico mayorista para EE. UU. y Canadá con Next.js, React y TypeScript. He liderado estándares de arquitectura y modernización frontend, integrando APIs en Node.js y .NET, y uso flujos asistidos por IA para llevar diseños de Figma a producción.",
     "download-cv": "Descargar CV",
+    "cv-file-hint": "PDF",
+    "available": "Disponible para trabajar",
+    "contact-links": "Enlaces de contacto",
+    "new-tab": "(se abre en una nueva pestaña)",
+    "send-email": "Enviar un correo",
+    "chat-whatsapp": "Chatear por WhatsApp",
+    "linkedin-profile": "Perfil de LinkedIn",
+    "github-profile": "Perfil de GitHub",
+    "whatsapp": "WhatsApp",
+    "whatsapp-message": "¡Hola, Faber! Visité tu portafolio y me gustaría charlar contigo",
     "email": "Correo electrónico",
     "english": "Inglés",
     "github": "GitHub",
@@ -38,11 +75,11 @@
     "remote-work-value": "¡Por supuesto!",
     "remote-work": "Trabajo remoto",
     "spanish": "Español",
-    "status-value": "Disponible para trabajar",
+    "status-value": "¡Disponible para trabajar!",
     "status": "Estado",
     "technical-skills": "Habilidades técnicas",
     "timezone": "Zona horaria",
-    "title": "Hola, soy Faber Grajales",
+    "greeting": "Hola, soy",
     "work-type-value": "Tiempo completo",
     "work-type": "Tipo de trabajo"
   },
@@ -57,27 +94,30 @@
     "technical-bachelor-description": "En el colegio me inscribí en la modalidad en Sistemas ya que siempre me atrajo la tecnología, es aquí donde me apasioné por el desarrollo, disfrutaba ver cada semana las clases de software con Scratch y diagramas de flujo, suplicando por empezar a programar, pero hoy por hoy doy gracias a los buenos docentes que tuve y las buenas bases que sembraron en mi, ayudándome a desarrollar el razonamiento crítico y resolución de problemas.",
     "courses-certifications": "Cursos y Certificaciones",
     "view-credential": "Ver Credencial",
-    "credential-id": "ID de la Credencial"
+    "credential-id": "ID de la Credencial",
+    "opens-new-tab": "se abre en una pestaña nueva"
   },
   "experience": {
     "work-experience": "Experiencia Laboral",
-    "position": "Cargo",
+    "stack": "Tecnologías",
     "current": "Actual",
     "job-1-position": "Desarrollador de aplicaciones web",
     "job-1-description-1": "Desarrollé aplicaciones web empresariales B2B para marcas como Postobón, Nutresa, Ramo y Alquería. Lideré la modernización de interfaces, migrando aplicaciones de .NET WebForms a Vue.js y React.js.",
-    "job-1-description-2": "Gestioné bases de datos SQL Server, procedimientos almacenados, optimización de consultas y procesos ETL para operaciones de negocio. Stack: JavaScript · React.js · Vue.js · .NET Framework · C# · VB · SQL Server · SQLite.",
+    "job-1-description-2": "Gestioné bases de datos SQL Server, procedimientos almacenados, optimización de consultas y procesos ETL para operaciones de negocio.",
     "job-2-position": "Consultor de Soluciones III",
     "job-2-description-1": "Desarrollé un sistema full stack de evaluación crediticia para Banco Popular, integrando APIs REST con el patrón repositorio y Entity Framework Core.",
-    "job-2-description-2": "Implementé un HealthChecker para monitorizar de forma proactiva la disponibilidad y el rendimiento de los servicios. Stack: Angular · TypeScript · Tailwind CSS · .NET Core 5 · C# · SQL Server.",
+    "job-2-description-2": "Implementé un HealthChecker para monitorizar de forma proactiva la disponibilidad y el rendimiento de los servicios.",
     "job-3-position": "Líder de Desarrollo Frontend",
     "job-3-description-1": "Definí estándares de arquitectura frontend y lideré decisiones técnicas, evaluación de tecnologías, estrategias de migración y revisiones de código. Trabajé con React, Next.js y TypeScript, y migré la gestión de estado de Redux Toolkit a Zustand para reducir la complejidad.",
-    "job-3-description-2": "Desarrollé un generador de encuestas Drag & Drop con lógica condicional y vista previa en tiempo real, y un sistema de reportería dinámica con ECharts para tablas, gráficos y mapas. Integré servicios .NET Core y optimicé APIs y consultas SQL Server. Stack: React.js · Next.js · TypeScript · Zustand · TanStack Query · Ant Design · Tailwind CSS · ECharts · .NET Core · C# · SQL Server.",
+    "job-3-description-2": "Desarrollé un generador de encuestas Drag & Drop con lógica condicional y vista previa en tiempo real, y un sistema de reportería dinámica con ECharts para tablas, gráficos y mapas. Integré servicios .NET Core y optimicé APIs y consultas SQL Server.",
     "job-4-position": "Desarrollador Frontend Senior (Contratista)",
     "job-4-description-1": "Desarrollo el storefront de una plataforma B2B de comercio electrónico mayorista para EE. UU. y Canadá, en un monorepo con Next.js 15, React 19 y TypeScript, un BFF sobre Azure Functions y Contentstack CMS.",
     "job-4-description-2": "Entregué flujos de producto, carrito y checkout, incluyendo compras como invitado o usuario autenticado, restricciones de envío y manejo de errores al crear pedidos. Integré APIs de comercio con TanStack Query y Zustand.",
     "job-4-description-3": "Implementé funcionalidades de cuenta, listas guardadas con búsqueda, ordenamiento y totales, y vistas de detalle de pedidos, alineando los contratos frontend con las APIs.",
-    "job-4-description-4": "Llevé diseños de Figma a interfaces de producción con tokens de diseño y Tailwind CSS para escritorio y móvil. Creé flujos asistidos por IA a partir de Jira y Figma para generar componentes tipados, mocks y stories de forma consistente.",
-    "job-4-description-5": "Stack: React 19 · Next.js 15 · TypeScript · Tailwind CSS · Zustand · TanStack Query · GraphQL · Contentstack · Azure Functions · Figma · Jira · Cursor · Claude Code · Datadog."
+    "job-4-description-4": "Llevé diseños de Figma a interfaces de producción con tokens de diseño y Tailwind CSS para escritorio y móvil. Creé flujos asistidos por IA a partir de Jira y Figma para generar componentes tipados, mocks y stories de forma consistente."
+  },
+  "dates": {
+    "present": "Actualidad"
   },
   "months": {
     "january": "Enero",
@@ -104,7 +144,17 @@
     "axonjs-description": "Un framework frontend JavaScript ligero que construí con fines educativos, inspirado en sistemas reactivos como Vue.js.",
     "view-details": "Ver detalles",
     "private": "Privado",
-    "close": "Cerrar proyecto"
+    "close": "Cerrar proyecto",
+    "opens-new-tab": "se abre en una pestaña nueva",
+    "preview-alt": "Vista previa de {name}",
+    "detail-alt": "Captura {n} de {name}",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cms": "CMS",
+      "devops": "DevOps",
+      "observability": "Observabilidad"
+    }
   },
   "skills": {
     "leadership": "Liderazgo",
@@ -115,6 +165,12 @@
     "adaptability": "Adaptabilidad",
     "teamwork": "Trabajo en equipo",
     "innovation": "Innovación",
-    "optimization": "Optimización"
+    "optimization": "Optimización",
+    "levels": {
+      "expert": "Experto",
+      "advanced": "Avanzado",
+      "intermediate": "Intermedio",
+      "beginner": "Principiante"
+    }
   }
 }

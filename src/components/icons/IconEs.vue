@@ -1,5 +1,10 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+  >
     <mask id="IconifyId1904fde5f4143b680">
       <circle cx="256" cy="256" r="256" fill="#fff"></circle>
     </mask>

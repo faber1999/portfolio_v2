@@ -1,10 +1,16 @@
 @import './view-transitions.css';
 
+/* Latin subset of the Quicksand variable font (WOFF2, ~28KB), served from public/fonts so
+   index.html can preload it by a stable URL. Glyphs outside the range fall back to system-ui. */
 @font-face {
   font-family: 'Quicksand';
-  src: url('../assets/fonts/Quicksand-VariableFont_wght.ttf') format('truetype-variations');
+  src: url('/fonts/quicksand-latin-var.woff2') format('woff2');
   font-weight: 300 700;
   font-style: normal;
+  font-display: swap;
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2190-2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @tailwind base;
@@ -77,10 +83,12 @@
     --primary: 0 100% 0%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 221.97 81.33% 55.88%;
+    /* Darkened for WCAG AA on the light panel (#f2f2f2): 6.0:1 (was 4.3:1). */
+    --secondary: 221 83% 45%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --tertiary: 270.74 91.01% 65.1%;
+    /* Gradient end, darkened for AA: 5.8:1 on #f2f2f2 (was 3.5:1). */
+    --tertiary: 271 70% 50%;
     --tertiary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -151,16 +159,7 @@
 }
 
 html {
-  font-family:
-    'Quicksand',
-    ui-monospace,
-    SFMono-Regular,
-    Menlo,
-    Monaco,
-    Consolas,
-    Liberation Mono,
-    Courier New,
-    monospace;
+  font-family: 'Quicksand', ui-sans-serif, system-ui, sans-serif;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -197,9 +196,6 @@ body * {
   .header-control {
     @apply flex size-11 items-center justify-center rounded-full border border-black/10 bg-secondary hover:bg-white/80 dark:border-white/15 dark:hover:bg-white/15;
   }
-  .cv-link {
-    @apply rounded-full border border-secondary px-5 py-2.5 text-base text-secondary;
-  }
   .project-preview {
     @apply block w-full aspect-video overflow-hidden rounded-xl border border-black/5 bg-white/60 dark:bg-black/20 dark:border-white/10;
   }
@@ -221,6 +217,35 @@ body * {
     padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
   }
 
+  /* App shell: DOM order header -> nav -> main; nav is a bottom bar on mobile, a left rail on md+. */
+  .app-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      'header'
+      'content'
+      'nav';
+  }
+  .app-shell-header {
+    grid-area: header;
+  }
+  .app-shell-nav {
+    grid-area: nav;
+  }
+  .app-shell-content {
+    grid-area: content;
+  }
+  @media (min-width: 768px) {
+    .app-shell {
+      grid-template-columns: auto minmax(0, 1fr);
+      grid-template-rows: auto minmax(0, 1fr);
+      grid-template-areas:
+        'nav header'
+        'nav content';
+    }
+  }
+
   .timeline-item {
     overflow-wrap: anywhere;
   }
@@ -233,6 +258,10 @@ body * {
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+}
+/* #content is only focused programmatically (skip link), no ring around the whole page. */
+#content:focus {
+  outline: none;
 }
 #content {
   overscroll-behavior-y: contain;
@@ -273,8 +302,12 @@ a {
   mask-size:
     calc(100% - var(--scrollbar-w, 0px)) 100%,
     var(--scrollbar-w, 0px) 100%;
-  -webkit-mask-position: left top, right top;
-  mask-position: left top, right top;
+  -webkit-mask-position:
+    left top,
+    right top;
+  mask-position:
+    left top,
+    right top;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   transition:
@@ -311,8 +344,4 @@ body * {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-.cv-link:hover {
-  background: hsl(var(--secondary) / 0.1);
 }

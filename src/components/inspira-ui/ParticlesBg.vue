@@ -5,8 +5,13 @@
 </template>
 
 <script setup lang="ts">
-import { useDevicePixelRatio, useMouse, usePreferredReducedMotion } from '@vueuse/core'
-import { computed, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
+import {
+  useDevicePixelRatio,
+  useDocumentVisibility,
+  useMouse,
+  usePreferredReducedMotion,
+} from '@vueuse/core'
+import { computed, onBeforeUnmount, onMounted, reactive, ref, shallowRef, watch } from 'vue'
 
 type Circle = {
   x: number
@@ -38,11 +43,13 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const reducedMotion = usePreferredReducedMotion()
+const visibility = useDocumentVisibility()
 let animationFrame = 0
 const canvasRef = ref<HTMLCanvasElement | null>(null)
 const canvasContainerRef = ref<HTMLDivElement | null>(null)
 const context = ref<CanvasRenderingContext2D | null>(null)
-const circles = ref<Circle[]>([])
+// Plain (non-deep-reactive) array: circles are mutated every frame, deep reactivity is pure overhead.
+const circles = shallowRef<Circle[]>([])
 const mouse = reactive<{ x: number; y: number }>({ x: 0, y: 0 })
 const canvasSize = reactive<{ w: number; h: number }>({ w: 0, h: 0 })
 const { x: mouseX, y: mouseY } = useMouse()
@@ -76,7 +83,7 @@ onMounted(() => {
   }
 
   initCanvas()
-  if (reducedMotion.value !== 'reduce') animate()
+  if (reducedMotion.value !== 'reduce' && visibility.value === 'visible') animate()
   window.addEventListener('resize', initCanvas)
 })
 
@@ -89,6 +96,12 @@ watch(reducedMotion, (value) => {
   cancelAnimationFrame(animationFrame)
   if (value !== 'reduce') animate()
   else initCanvas()
+})
+
+// Pause the animation loop while the tab is hidden.
+watch(visibility, (value) => {
+  cancelAnimationFrame(animationFrame)
+  if (value === 'visible' && reducedMotion.value !== 'reduce') animate()
 })
 
 watch([mouseX, mouseY], () => {

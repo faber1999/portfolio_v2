@@ -1,9 +1,10 @@
 <template>
   <svg
+    aria-hidden="true"
+    focusable="false"
     fill="currentColor"
     viewBox="0 0 512 512"
     enable-background="new 0 0 512 512"
-    id="Layer_1"
     version="1.1"
     xml:space="preserve"
     xmlns="http://www.w3.org/2000/svg"

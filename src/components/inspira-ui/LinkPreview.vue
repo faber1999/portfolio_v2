@@ -2,22 +2,28 @@
   <div :class="cn('relative w-fit', props.class)">
     <!-- Trigger -->
     <a
+      ref="trigger"
       :href="url"
       target="_blank"
+      rel="noopener noreferrer"
       :class="cn('text-black dark:text-white', props.linkClass)"
-      @mousemove="handleMouseMove"
-      @mouseenter="showPreview"
-      @mouseleave="hidePreview"
+      @pointermove="handlePointerMove"
+      @pointerenter="handlePointerEnter"
+      @pointerleave="hidePreview"
+      @focus="handleFocus"
+      @blur="hidePreview"
+      @keydown.esc="hidePreview"
     >
       <slot />
     </a>
 
-    <!-- Preview -->
+    <!-- Preview (decorative: the link text already describes the destination) -->
     <div
-      v-if="isVisible"
+      v-if="isVisible && !hasError"
       ref="preview"
       class="pointer-events-none absolute z-50"
       :style="previewStyle"
+      aria-hidden="true"
     >
       <div
         class="overflow-hidden rounded-xl shadow-xl"
@@ -42,7 +48,7 @@
             :height="height"
             class="size-full rounded-lg object-cover"
             :style="imageStyle"
-            alt="preview"
+            alt=""
             @load="handleImageLoad"
           />
         </div>
@@ -53,7 +59,7 @@
 
 <script setup lang="ts">
 import { cn } from '@/lib/utils'
-import { computed, onMounted, reactive, ref, type CSSProperties } from 'vue'
+import { computed, reactive, ref, type CSSProperties } from 'vue'
 
 interface BaseProps {
   class?: string
@@ -88,8 +94,12 @@ const props = withDefaults(defineProps<Props>(), {
 
 const isVisible = ref(false)
 const isLoading = ref(true)
+const trigger = ref<HTMLAnchorElement | null>(null)
 const preview = ref<HTMLElement | null>(null)
 const hasPopped = ref(false)
+const hasError = ref(false)
+// The screenshot is requested lazily, on the first hover/keyboard focus, not on mount.
+const hasRequestedImage = ref(false)
 
 // Generate preview URL
 const previewSrc = computed(() => {
@@ -110,11 +120,8 @@ const previewSrc = computed(() => {
   return `https://api.microlink.io/?${params.toString()}`
 })
 
-// Position tracking
-const mousePosition = reactive({
-  x: 0,
-  y: 0,
-})
+// Horizontal anchor point of the preview (pointer x, or link center on keyboard focus)
+const anchor = reactive({ x: 0 })
 
 // Calculate preview position
 const previewStyle = computed<CSSProperties>(() => {
@@ -125,11 +132,16 @@ const previewStyle = computed<CSSProperties>(() => {
   const previewHeight = props.height
   const viewportWidth = window.innerWidth
 
-  let x = mousePosition.x - previewWidth / 2
+  let x = anchor.x - previewWidth / 2
   x = Math.min(Math.max(0, x), viewportWidth - previewWidth)
 
-  const linkRect = preview.value.parentElement?.getBoundingClientRect()
-  const y = linkRect ? linkRect.top - previewHeight - offset : 0
+  const linkRect = trigger.value?.getBoundingClientRect()
+  let y = 0
+  if (linkRect) {
+    y = linkRect.top - previewHeight - offset
+    // Not enough room above the link: show it below instead
+    if (y < 0) y = linkRect.bottom + offset
+  }
 
   return {
     position: 'fixed',
@@ -152,12 +164,29 @@ const popClass = computed(() => {
   return 'animate-pop'
 })
 
-function handleMouseMove(event: MouseEvent) {
-  mousePosition.x = event.clientX
-  mousePosition.y = event.clientY
+function handlePointerMove(event: PointerEvent) {
+  if (event.pointerType !== 'mouse') return
+  anchor.x = event.clientX
+}
+
+function handlePointerEnter(event: PointerEvent) {
+  // Touch/pen taps navigate directly; the floating preview is a mouse-only enhancement.
+  if (event.pointerType !== 'mouse') return
+  anchor.x = event.clientX
+  showPreview()
+}
+
+function handleFocus(event: FocusEvent) {
+  const el = event.currentTarget as HTMLElement
+  // Only keyboard focus (focus-visible) shows the preview, so taps on touch devices don't.
+  if (!el.matches(':focus-visible')) return
+  const rect = el.getBoundingClientRect()
+  anchor.x = rect.left + rect.width / 2
+  showPreview()
 }
 
 function showPreview() {
+  requestImage()
   isVisible.value = true
   setTimeout(() => {
     hasPopped.value = true
@@ -173,32 +202,23 @@ function handleImageLoad() {
   isLoading.value = false
 }
 
-// Preload image on component mount
-function preloadImage() {
-  if (!props.isStatic && props.url) {
-    const img = new Image()
-    img.onload = () => {
-      isLoading.value = false
-    }
-    img.onerror = () => {
-      isLoading.value = false
-    }
-    img.src = previewSrc.value
-  } else if (props.isStatic && props.imageSrc) {
-    const img = new Image()
-    img.onload = () => {
-      isLoading.value = false
-    }
-    img.onerror = () => {
-      isLoading.value = false
-    }
-    img.src = props.imageSrc
-  }
-}
+// Request the screenshot once; the <img> then renders it from cache.
+function requestImage() {
+  if (hasRequestedImage.value) return
+  const src = previewSrc.value
+  if (!src) return
+  hasRequestedImage.value = true
 
-onMounted(() => {
-  preloadImage()
-})
+  const img = new Image()
+  img.onload = () => {
+    isLoading.value = false
+  }
+  img.onerror = () => {
+    isLoading.value = false
+    hasError.value = true
+  }
+  img.src = src
+}
 </script>
 
 <style scoped>
@@ -211,6 +231,12 @@ onMounted(() => {
 .animate-pop {
   animation: pop 1000ms ease forwards;
   will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pop {
+    animation: none;
+  }
 }
 
 @keyframes pop {
