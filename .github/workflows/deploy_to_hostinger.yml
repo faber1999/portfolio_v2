@@ -3,7 +3,19 @@ name: Deployment to Hostinger via FTP
 on:
   push:
     branches:
-      - main # Cambia a la rama que prefieras
+      - main
+    # Cambios que no afectan a dist/ no disparan un deploy
+    paths-ignore:
+      - '**.md'
+      - '.vscode/**'
+      - '.claude/**'
+  workflow_dispatch: # Permite lanzar el deploy manualmente desde GitHub
+
+# Un solo deploy a la vez. Se encolan en vez de cancelarse para no cortar
+# una subida FTP a mitad (el estado de sync solo se guarda al final).
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -12,44 +24,39 @@ jobs:
     steps:
       # 1. Checkout del repositorio
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # 2. Instalar dependencias y construir el proyecto
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18' # Ajusta a la versión de Node que uses
-
       - name: Install pnpm
-        run: npm install -g pnpm@10.29.3
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.29.3
+
+      # Nota: no se usa `cache: pnpm` porque pnpm-lock.yaml está en .gitignore
+      # (setup-node falla si no encuentra el lockfile). Ver recomendaciones.
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
 
       - name: Install dependencies
         run: pnpm install
 
       - name: Build project
-        run: pnpm build # Asegúrate de que este comando genere la carpeta dist
+        run: pnpm build # Genera la carpeta dist
 
-      # 3. Eliminar archivos antiguos en el servidor FTP
-      - name: Delete specific files and folders over FTP
-        run: |
-          ftp -inv ${{ secrets.HOSTINGER_FTP_SERVER }} <<EOF
-          user ${{ secrets.HOSTINGER_FTP_USERNAME }} ${{ secrets.HOSTINGER_FTP_PASSWORD }}
-          mdelete assets/*
-          mdelete *.ico
-          delete index.html
-          delete .ftp-deploy-sync-state.json
-          bye
-          EOF
-
-      # 4. Verificar el contenido de la carpeta dist
-      - name: List dist directory
-        run: ls -la ./dist
-
-      # 5. Subir nuevos archivos al servidor FTP
-      - name: Upload files to FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      # 3. Sincronizar dist/ con el servidor FTP.
+      # FTP-Deploy-Action compara hashes contra .ftp-deploy-sync-state.json en el
+      # servidor: solo sube archivos nuevos/modificados y borra los que se
+      # eliminaron de dist/ (p. ej. assets con hash viejo de Vite). Archivos que
+      # nunca subió la acción (.htaccess, etc.) no se tocan.
+      # IMPORTANTE: no borrar .ftp-deploy-sync-state.json del servidor, o el
+      # siguiente deploy volverá a subir todo.
+      - name: Sync files to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets.HOSTINGER_FTP_SERVER }}
           username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
           password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
           local-dir: ./dist/
+          timeout: 120000
