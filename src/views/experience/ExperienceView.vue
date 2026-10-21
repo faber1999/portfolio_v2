@@ -18,6 +18,7 @@ const experience: ExperienceEntry[] = [
     position: 'experience.job-4-position',
     company: 'Smith',
     start: '2026-04',
+    end: '2026-10',
     descriptions: [
       'experience.job-4-description-1',
       'experience.job-4-description-2',
