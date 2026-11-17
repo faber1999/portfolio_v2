@@ -176,12 +176,15 @@ html {
   }
 }
 
-body * {
-  scrollbar-gutter: stable;
-  transition:
-    background 0.5s ease-in-out,
-    background-color 0.5s ease-in-out,
-    border-color 0.5s ease-in-out;
+/* Theme-switch fade, scoped to the large surfaces (app background, header/nav pills, panels,
+   cards) instead of every element, so toggling `.dark` only animates a handful of boxes.
+   :where() keeps specificity at 0, so any Tailwind `transition-*` / `duration-*` utility on the
+   same element still wins. Kept outside @layer so Tailwind doesn't merge it into
+   `@apply bg-secondary` or generate variants from it. */
+:where(body, .bg-primary, .bg-secondary, .bg-tertiary, .surface-panel, .project-preview) {
+  transition-property: background-color, border-color, color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
 }
 
 /* Shared refinements preserve the original palettes and translucent surfaces. */
@@ -194,7 +197,7 @@ body * {
     border-color: rgb(255 255 255 / 9%);
   }
   .header-control {
-    @apply flex size-11 items-center justify-center rounded-full border border-black/10 bg-secondary hover:bg-white/80 dark:border-white/15 dark:hover:bg-white/15;
+    @apply flex size-11 items-center justify-center rounded-full border border-black/10 bg-secondary transition-colors duration-200 hover:bg-white/80 dark:border-white/15 dark:hover:bg-white/15;
   }
   .project-preview {
     @apply block w-full aspect-video overflow-hidden rounded-xl border border-black/5 bg-white/60 dark:bg-black/20 dark:border-white/10;

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import TechChip from '@/components/TechChip.vue'
-import type { Lang } from './ProjectCard.vue'
+import type { Lang } from '@/data/types'
 
 defineProps<{
   techs: Record<string, Lang[]>

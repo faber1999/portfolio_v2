@@ -38,8 +38,6 @@
     "education": "Education"
   },
   "header": {
-    "light-mode": "Light Mode",
-    "dark-mode": "Dark Mode",
     "portfolio": "Faber's Portfolio"
   },
   "profile": {
@@ -48,9 +46,8 @@
     "city": "City",
     "contact-info": "Contact Information",
     "country": "Country",
-    "current-location": "Located: Armenia, Quindío, Colombia",
     "description-1": "I am a Systems Engineer with {years}+ years of experience building scalable web applications for enterprise B2B clients. I specialize in frontend development, architecture, and technical leadership.",
-    "description-2": "I'm currently building a wholesale e-commerce platform for the U.S. and Canada with Next.js, React, and TypeScript. I've led frontend architecture standards and modernization, integrating Node.js and .NET APIs, and I use AI-assisted workflows to take Figma designs to production.",
+    "description-2": "Most recently, I helped build a wholesale e-commerce platform for the U.S. and Canada with Next.js, React, and TypeScript. I've led frontend architecture standards and modernization, integrating Node.js and .NET APIs, and I use AI-assisted workflows to take Figma designs to production.",
     "download-cv": "Download CV",
     "cv-file-hint": "PDF",
     "available": "Available for work",
@@ -119,29 +116,10 @@
   "dates": {
     "present": "Present"
   },
-  "months": {
-    "january": "January",
-    "february": "February",
-    "march": "March",
-    "april": "April",
-    "may": "May",
-    "june": "June",
-    "july": "July",
-    "august": "August",
-    "september": "September",
-    "october": "October",
-    "november": "November",
-    "december": "December"
-  },
-  "under-construction": {
-    "title": "Under Construction",
-    "description": "Coming soon..."
-  },
   "projects": {
     "title": "Projects",
     "view-demo": "View Demo",
     "view-github": "View on GitHub",
-    "axonjs-description": "A lightweight frontend JavaScript framework I built for educational purposes, inspired by reactive systems like Vue.js.",
     "view-details": "View details",
     "private": "Private",
     "close": "Close project",

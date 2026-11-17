@@ -5,7 +5,13 @@ import ContactLinks from './components/ContactLinks.vue'
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
 import { getYearsOfExperience } from '@/lib/utils'
-import { CONTACT_EMAIL, GITHUB_URL, LINKEDIN_URL, WHATSAPP_DISPLAY, whatsappUrl } from './contact'
+import {
+  CONTACT_EMAIL,
+  GITHUB_URL,
+  LINKEDIN_URL,
+  WHATSAPP_DISPLAY,
+  whatsappUrl,
+} from '@/data/contact'
 
 const { locale, t } = useI18n()
 

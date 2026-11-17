@@ -1,20 +1,12 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { useDark } from '@vueuse/core'
-import { watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import IconMoon from './icons/IconMoon.vue'
 import IconSun from './icons/IconSun.vue'
 
 const { locale } = useI18n()
 const isDark = useDark()
-watch(
-  locale,
-  (value) => {
-    document.documentElement.lang = value
-  },
-  { immediate: true },
-)
 
 const languages = [
   { code: 'en', label: 'EN', name: 'English' },

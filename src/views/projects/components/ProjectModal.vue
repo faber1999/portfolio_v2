@@ -2,7 +2,7 @@
 import { computed, ref, watch, nextTick, onBeforeUnmount } from 'vue'
 import { usePreferredReducedMotion } from '@vueuse/core'
 import { useTranslate } from '@/composables/useTranslate'
-import type { Lang, Detail, PreviewVideo } from './ProjectCard.vue'
+import type { Lang, Detail, PreviewVideo } from '@/data/types'
 import type { Translations } from '@/composables/useTranslate'
 import TechStack from './TechStack.vue'
 import ProjectLinks, { neutralActionClass } from './ProjectLinks.vue'

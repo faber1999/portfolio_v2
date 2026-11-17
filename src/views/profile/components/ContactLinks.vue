@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { CONTACT_EMAIL, GITHUB_URL, LINKEDIN_URL, whatsappUrl } from '../contact'
+import { CONTACT_EMAIL, GITHUB_URL, LINKEDIN_URL, whatsappUrl } from '@/data/contact'
 
 type IconName = 'email' | 'linkedin' | 'github' | 'whatsapp'
 

@@ -5,22 +5,7 @@ import { useTranslate, type Translations } from '@/composables/useTranslate'
 import TechStack from './TechStack.vue'
 import ProjectLinks, { actionClass, neutralActionClass } from './ProjectLinks.vue'
 import { mediaSize } from '../media'
-
-export interface Lang {
-  name: string
-  icon?: string
-  abbreviation?: string
-}
-
-export interface Detail {
-  img?: string
-  description: Translations
-}
-
-export interface PreviewVideo {
-  webm?: string
-  mp4?: string
-}
+import type { Detail, Lang, PreviewVideo } from '@/data/types'
 
 const props = defineProps<{
   name: string

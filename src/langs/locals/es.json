@@ -38,8 +38,6 @@
     "education": "Educación"
   },
   "header": {
-    "light-mode": "Modo Claro",
-    "dark-mode": "Modo Oscuro",
     "portfolio": "Portafolio de Faber"
   },
   "profile": {
@@ -48,9 +46,8 @@
     "city": "Ciudad",
     "contact-info": "Información de contacto",
     "country": "País",
-    "current-location": "Ubicado en: Armenia, Quindío, Colombia",
     "description-1": "Soy Ingeniero de Sistemas con {years}+ años de experiencia construyendo aplicaciones web escalables para clientes empresariales B2B. Me especializo en desarrollo frontend, arquitectura y liderazgo técnico.",
-    "description-2": "Actualmente construyo una plataforma de comercio electrónico mayorista para EE. UU. y Canadá con Next.js, React y TypeScript. He liderado estándares de arquitectura y modernización frontend, integrando APIs en Node.js y .NET, y uso flujos asistidos por IA para llevar diseños de Figma a producción.",
+    "description-2": "Recientemente participé en la construcción de una plataforma de comercio electrónico mayorista para EE. UU. y Canadá con Next.js, React y TypeScript. He liderado estándares de arquitectura y modernización frontend, integrando APIs en Node.js y .NET, y uso flujos asistidos por IA para llevar diseños de Figma a producción.",
     "download-cv": "Descargar CV",
     "cv-file-hint": "PDF",
     "available": "Disponible para trabajar",
@@ -119,29 +116,10 @@
   "dates": {
     "present": "Actualidad"
   },
-  "months": {
-    "january": "Enero",
-    "february": "Febrero",
-    "march": "Marzo",
-    "april": "Abril",
-    "may": "Mayo",
-    "june": "Junio",
-    "july": "Julio",
-    "august": "Agosto",
-    "september": "Septiembre",
-    "october": "Octubre",
-    "november": "Noviembre",
-    "december": "Diciembre"
-  },
-  "under-construction": {
-    "title": "En Construcción",
-    "description": "Próximamente..."
-  },
   "projects": {
     "title": "Proyectos",
     "view-demo": "Ver Demo",
     "view-github": "Ver en GitHub",
-    "axonjs-description": "Un framework frontend JavaScript ligero que construí con fines educativos, inspirado en sistemas reactivos como Vue.js.",
     "view-details": "Ver detalles",
     "private": "Privado",
     "close": "Cerrar proyecto",

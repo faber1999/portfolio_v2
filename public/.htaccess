@@ -1,0 +1,92 @@
+# Hostinger (Apache / LiteSpeed) config for the Vue SPA.
+# Copied verbatim into dist/ by Vite (everything in public/ is), then deployed via FTP.
+
+# --- 1. Force HTTPS + SPA history fallback ---
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Redirect plain HTTP to HTTPS (X-Forwarded-Proto covers proxies/CDN in front of the server).
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Serve index.html directly.
+  RewriteRule ^index\.html$ - [L]
+
+  # Vite's hashed build output: flag it for the immutable cache header below and never fall
+  # back to index.html (a missing old chunk must 404, not return HTML with a JS MIME error).
+  RewriteRule ^assets/ - [E=VITE_ASSET:1,L]
+
+  # Existing files and directories are served as-is; everything else goes to the SPA.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# --- 2. Correct MIME types for modern formats ---
+<IfModule mod_mime.c>
+  AddType font/woff2 .woff2
+  AddType image/webp .webp
+  AddType image/avif .avif
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
+# --- 3. Caching ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+
+  ExpiresByType text/html "access plus 0 seconds"
+
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/avif "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/gif "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 month"
+  ExpiresByType image/vnd.microsoft.icon "access plus 1 month"
+
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+
+  ExpiresByType application/pdf "access plus 1 week"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Hashed /assets/* files (flagged by the rewrite rule above): cache forever.
+  Header set Cache-Control "public, max-age=31536000, immutable" env=VITE_ASSET
+
+  # The rules below skip /assets/* (env=!VITE_ASSET) so they never override the one above.
+  # HTML (index.html and the SPA fallback): always revalidate so new deploys are picked up.
+  <FilesMatch "\.html?$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+
+  # Images: 1 month (not hashed, so avoid immutable).
+  <FilesMatch "\.(webp|avif|png|jpe?g|gif|svg|ico)$">
+    Header set Cache-Control "public, max-age=2592000" env=!VITE_ASSET
+  </FilesMatch>
+
+  # Fonts: 1 year (preloaded by a stable URL; rename the file if it ever changes).
+  <FilesMatch "\.(woff2?)$">
+    Header set Cache-Control "public, max-age=31536000" env=!VITE_ASSET
+  </FilesMatch>
+
+  # CV PDFs: 1 week, revalidated afterwards so an updated CV propagates.
+  <FilesMatch "\.pdf$">
+    Header set Cache-Control "public, max-age=604800, must-revalidate" env=!VITE_ASSET
+  </FilesMatch>
+
+  # robots / sitemap: short cache.
+  <FilesMatch "^(robots\.txt|sitemap\.xml)$">
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+</IfModule>
+
+# --- 4. Compression ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript text/javascript application/json
+  AddOutputFilterByType DEFLATE application/xml application/manifest+json image/svg+xml
+</IfModule>
